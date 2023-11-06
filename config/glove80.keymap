@@ -31,6 +31,10 @@
         };
     };
 
+    &lt {
+        tapping-term-ms = <140>;
+    };
+
     macros {
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
             label = "RGB_UG_STATUS";
@@ -82,12 +86,12 @@
 
         base_layer {
             bindings = <
-&kp F1           &kp F2          &kp F3   &kp F4    &kp F5                                                                                     &kp F6  &kp F7     &kp F8    &kp F9          &kp F10
-&kp EQUAL        &kp N1          &kp N2   &kp N3    &kp N4     &kp N5                                                                  &kp N6  &kp N7  &kp N8     &kp N9    &kp N0          &kp MINUS
-&kp TAB          &kp Q           &kp W    &kp F     &kp P      &kp G                                                                   &kp M   &kp L   &kp U      &kp Y     &kp SEMI        &kp BSLH
-&mt LGUI ESC     &kp A           &kp R    &kp S     &kp T      &kp V                                                                   &kp K   &kp N   &kp E      &kp I     &kp O           &kp SQT
-&mt LCTRL GRAVE  &mt LSHFT Z     &kp X    &kp C     &kp D      &kp B   &kp BSPC    &kp LALT   &lower    &kp RCTRL &kp RGUI   &kp RET   &kp J   &kp H   &kp COMMA  &kp DOT   &mt RSHFT FSLH  &kp PG_UP
-&magic 2 0       &kp HOME        &kp END  &kp LEFT  &kp RIGHT          &kp SPACE   &kp DEL    &kp LALT  &kp TAB   &kp RSHFT  &kp SPACE         &kp UP  &kp DOWN   &kp LBKT  &kp RBKT        &kp PG_DN
+&kp F1           &kp F2          &kp F3   &kp F4    &kp F5                                                                                       &kp F6  &kp F7     &kp F8    &kp F9          &kp F10
+&kp EQUAL        &kp N1          &kp N2   &kp N3    &kp N4     &kp N5                                                                    &kp N6  &kp N7  &kp N8     &kp N9    &kp N0          &kp MINUS
+&kp TAB          &kp Q           &kp W    &kp F     &kp P      &kp G                                                                     &kp M   &kp L   &kp U      &kp Y     &kp SEMI        &kp BSLH
+&mt LGUI ESC     &kp A           &kp R    &kp S     &kp T      &kp V                                                                     &kp K   &kp N   &kp E      &kp I     &kp O           &kp SQT
+&mt LCTRL GRAVE  &mt LSHFT Z     &kp X    &kp C     &kp D      &kp B   &kp BSPC    &kp LALT   &lower    &kp RCTRL &kp RGUI   &lt 3 RET   &kp J   &kp H   &kp COMMA  &kp DOT   &mt RSHFT FSLH  &kp PG_UP
+&magic 2 0       &kp HOME        &kp END  &kp LEFT  &kp RIGHT          &kp SPACE   &kp DEL    &kp LALT  &kp TAB   &kp RSHFT  &kp SPACE           &kp UP  &kp DOWN   &kp LBKT  &kp RBKT        &kp PG_DN
             >;
         };
 
