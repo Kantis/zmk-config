@@ -65,6 +65,14 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_equal {
+            timeout-ms = <50>;
+            key-positions = <LT2 LT3>;
+            bindings = <&kp EQUAL>;
+        };
+    };
 
     macros {
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
