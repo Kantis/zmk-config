@@ -117,12 +117,12 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
         base_layer {
             bindings = <
-&kp F1           &kp F2          &kp F3         &kp F4           &kp F5                                                                                            &kp F6          &kp F7            &kp F8          &kp F9          &kp F10
-&kp EQUAL        &kp N1          &kp N2         &kp N3           &kp N4          &kp N5                                                                    &kp N6  &kp N7          &kp N8            &kp N9          &kp N0          &kp MINUS
-&kp TAB          &kp Q           &kp W          &kp F            &kp P           &kp G                                                                     &kp M   &kp L           &kp U             &kp Y           &kp SEMI        &kp BSLH
-&mt LGUI ESC     &hml LGUI A     &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                     &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O     &kp SQT
-&mt LCTRL GRAVE  &mt LSHFT Z     &kp X          &kp C            &kp D           &kp B   &kp BSPC    &kp LALT   &lower    &kp RCTRL &kp RGUI   &lt 3 RET   &kp J   &kp H           &kp COMMA         &kp DOT         &mt RSHFT FSLH  &kp PG_UP
-&magic 2 0       &kp HOME        &kp END        &kp LBKT         &kp RBKT                &kp SPACE   &kp DEL    &kp LALT  &kp TAB   &kp RSHFT  &kp SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT       &kp PG_DN
+&kp F1           &kp F2          &kp F3         &kp F4           &kp F5                                                                                              &kp F6          &kp F7            &kp F8          &kp F9          &kp F10
+&kp EQUAL        &kp N1          &kp N2         &kp N3           &kp N4          &kp N5                                                                      &kp N6  &kp N7          &kp N8            &kp N9          &kp N0          &kp MINUS
+&kp TAB          &kp Q           &kp W          &kp F            &kp P           &kp G                                                                       &kp M   &kp L           &kp U             &kp Y           &kp SEMI        &kp BSLH
+&lt 4 ESC        &hml LGUI A     &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                       &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O     &lt 7 SQT
+&lt 5 GRAVE      &kp Z           &kp X          &kp C            &kp D           &kp B   &kp BSPC      &kp LALT   &lower    &kp RCTRL &kp RGUI   &kp RET     &kp J   &kp H           &kp COMMA         &kp DOT         &lt 6 FSLH      &kp PG_UP
+&magic 2 0       &kp HOME        &kp END        &kp LBKT         &kp RBKT                &kp SPACE     &kp DEL    &kp LALT  &kp TAB   &kp RSHFT  &kp SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT       &kp PG_DN
             >;
         };
 
@@ -161,12 +161,12 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                                                                   &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans                   &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LEFT_PARENTHESIS     &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp RIGHT_PARENTHESIS    &kp F4  &kp F5  &kp F6  &kp F11  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp COLON                &kp F1  &kp F2  &kp F3  &kp F12  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans   &trans
             >;
         };
 
@@ -192,14 +192,14 @@ ZMK_BEHAVIOR(hmr, hold_tap,
             >;
         };
 
-        layer_7 {
+        layer_7  {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans  &trans          &trans                                                                                                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans  &trans          &trans                 &trans                                                                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &kp LESS_THAN           &kp GREATER_THAN       &kp COLON        &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_BRACE   &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp COMMA        &kp MINUS               &kp GREATER_THAN       &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans                  &trans                 &trans                   &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
