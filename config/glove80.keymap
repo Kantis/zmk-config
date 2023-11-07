@@ -19,6 +19,7 @@
 /* Defines */
 #define ___ &trans
 #define XXX &none
+#define COMBO_TERM_FAST 50
 
 &lt {
     tapping-term-ms = <140>;
@@ -79,14 +80,14 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     combos {
         compatible = "zmk,combos";
         combo_equal {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TERM_FAST>;
             key-positions = <LT2 LT3>;
             bindings = <&kp EQUAL>;
         };
 
         combo_minus {
-            timeout-ms = <50>;
-            key-positions = <LT3 LT4>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            key-positions = <LT1 LT2>;
             bindings = <&kp MINUS>;
         };
     };
