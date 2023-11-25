@@ -314,7 +314,7 @@ ___     ___              ___     ___             ___                            
 ___     ___              ___     ___             ___                    ___                                                                      ___     ___     ___     ___     ___     ___   
 ___     ___              &kp LESS_THAN           &kp GREATER_THAN       &kp COLON        ___                                                     ___     ___     ___     ___     ___     ___   
 ___     &kp LEFT_BRACE   &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  ___                                                     ___     ___     ___     ___     ___     ___   
-___     &kp COMMA        &kp MINUS               &kp GREATER_THAN       ___              ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___   
+___     &kp COMMA        &kp LESS_THAN           &kp GREATER_THAN       &kp KP_MULTIPLY  ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___   
 ___     ___              ___                     ___                    ___                      ___     ___     ___     ___     ___     ___             ___     ___     ___     ___     ___   
             >;
         };
