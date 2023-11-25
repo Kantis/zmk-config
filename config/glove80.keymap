@@ -94,7 +94,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
             label = "ALT_SWE_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LALT>, <&to SWE>;
+            bindings = <&kp ESC>, <&to SWE>;
         };
     };
 
