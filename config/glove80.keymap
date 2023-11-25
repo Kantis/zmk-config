@@ -58,13 +58,14 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     hold-trigger-on-release;             // delay positional check until key-release
 )
 
+
 /* left pinky-tap */
 ZMK_BEHAVIOR(lpt, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <280>;
     quick-tap-ms = <175>;                // repeat on tap-into-hold
     require-prior-idle-ms = <150>;
-    bindings = <&lt>, <&kp>;             // layer toggle on hold, kp on tap
+    bindings = <&mo>, <&kp>;             // layer toggle on hold, kp on tap
     hold-trigger-key-positions = <KEYS_R THUMBS>;
     hold-trigger-on-release;             // delay positional check until key-release
 )
@@ -75,7 +76,7 @@ ZMK_BEHAVIOR(rpt, hold_tap,
     tapping-term-ms = <280>;
     quick-tap-ms = <175>;                // repeat on tap-into-hold
     require-prior-idle-ms = <150>;
-    bindings = <&lt>, <&kp>;             // layer toggle on hold, kp on tap
+    bindings = <&mo>, <&kp>;             // layer toggle on hold, kp on tap
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;             // delay positional check until key-release
 )
@@ -235,7 +236,7 @@ ZMK_BEHAVIOR(rpt, hold_tap,
 &kp F1              &kp F2          &kp F3         &kp F4           &kp F5                                                                                                           &kp F6          &kp F7            &kp F8          &kp F9          &kp F10
 &kp EQUAL           &kp N1          &kp N2         &kp N3           &kp N4          &kp N5                                                                                   &kp N6  &kp N7          &kp N8            &kp N9          &kp N0          &kp MINUS
 &kp TAB             &kp Q           &kp W          &kp F            &kp P           &kp G                                                                                    &kp M   &kp L           &kp U             &kp Y           &kp SEMI        &kp BSLH
-&lpt RH_NUMPAD ESC   &hml LGUI A     &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                   &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O     &rpt 7 SQT
+&lpt RH_NUMPAD ESC  &hml LGUI A     &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                   &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O     &rpt 7 SQT
 &kp GRAVE           &kp Z           &kp X          &kp C            &kp D           &kp B   &kp BSPC                 &alt_swe   &lower    &kp RCTRL &kp RGUI     &kp RET     &kp J   &kp H           &kp COMMA         &kp DOT         &kp FSLH        &kp PG_UP
 &magic 2 0          &kp HOME        &kp END        &kp LBKT         &kp RBKT                &lt RH_FN_KEYS SPACE     &kp DEL    &kp LALT  &kp TAB   &shiftdance  &kp SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT       &kp PG_DN
             >;
