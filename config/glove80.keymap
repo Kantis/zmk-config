@@ -169,14 +169,11 @@ ZMK_BEHAVIOR(space, hold_tap,
         //
         //////////////////////////////////////////////////////////////////////////
 
-        //
+
         // SELECT_WORD_DELAY defines how long the macro waits (milliseconds)
         // after moving the cursor before it selects a word.  A larger delay
         // may allow the macro to move to the next word upon each invocation.
-        //
-        #ifndef SELECT_WORD_DELAY
         #define SELECT_WORD_DELAY 1
-        #endif
 
         ZMK_MACRO(select_none,
             wait-ms = <SELECT_WORD_DELAY>;
@@ -360,12 +357,12 @@ ZMK_BEHAVIOR(space, hold_tap,
 
         base_layer {
             bindings = <
-&kp F1              &kp F2          &kp F3         &kp F4           &kp F5                                                                                                                      &kp F6          &kp F7            &kp F8          &kp F9          &kp F10
-&kp EQUAL           &kp N1          &kp N2         &kp N3           &kp N4          &kp N5                                                                                              &kp N6  &kp N7          &kp N8            &kp N9          &kp N0          &kp MINUS
-&kp TAB             &kp Q           &kp W          &kp F            &kp P           &kp G                                                                                               &kp M   &kp L           &kp U             &kp Y           &kp SEMI        &kp BSLH
-&lpt RH_NUMPAD ESC  &hml LGUI A     &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                               &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O     &rpt LH_PROG SQT
-&kp GRAVE           &kp Z           &kp X          &kp C            &kp D           &kp B   &kp BSPC                 &alt_swe   &lower    &kp RCTRL &kp RGUI     &kp RET                &kp J   &kp H           &kp COMMA         &kp DOT         &kp FSLH        &kp PG_UP
-&magic 2 0          &kp HOME        &kp END        &kp LBKT         &kp RBKT                &space CURSOR SPACE      &kp DEL    &kp LALT  &kp TAB   &shiftdance  &space SYMBOLS SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT       &kp PG_DN
+&kp F1        &kp F2               &kp F3         &kp F4           &kp F5                                                                                                                      &kp F6          &kp F7            &kp F8          &kp F9              &kp F10
+&kp EQUAL     &kp N1               &kp N2         &kp N3           &kp N4          &kp N5                                                                                              &kp N6  &kp N7          &kp N8            &kp N9          &kp N0              &kp MINUS
+&kp TAB       &kp Q                &kp W          &kp F            &kp P           &kp G                                                                                               &kp M   &kp L           &kp U             &kp Y           &kp SEMI            &kp BSLH
+&kp ESC       &hml LGUI A          &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                               &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O         &kp SQT
+&kp GRAVE     &lpt RH_NUMPAD Z     &kp X          &kp C            &kp D           &kp B   &kp BSPC                 &alt_swe   &lower    &kp RCTRL &kp RGUI     &kp RET                &kp J   &kp H           &kp COMMA         &kp DOT         &rpt LH_PROG FSLH   &kp PG_UP
+&magic 2 0    &kp HOME             &kp END        &kp LBKT         &kp RBKT                &space CURSOR SPACE      &kp DEL    &kp LALT  &kp TAB   &shiftdance  &space SYMBOLS SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT           &kp PG_DN
             >;
         };
 
