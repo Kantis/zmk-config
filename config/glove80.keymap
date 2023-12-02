@@ -448,7 +448,7 @@ ___     ___              ___                     ___                    ___     
 ___     ___               ___             ___           ___                                                                                                                 ___        ___         ___            ___          ___   
 ___     ___               ___             ___           &kp DEL       ___                                                                                       ___         &kp DEL    ___         ___            ___          ___   
 ___     ___               &kp LG(Z)       &kp LG(Z)     &kp BSPC      &kp LG(X)                                                                                 &kp LG(X)   &kp BSPC   &kp LG(Y)   &kp LG(Z)      &kp TAB      ___   
-___     &kp LGUI          &kp LALT        &kp LCTRL     &kp LSHFT     &kp LG(C)                                                                                 &kp LG(C)   &kp LEFT   &kp DOWN    &kp UP         &kp RIGHT    ___   
+___     &kp LGUI          &kp LALT        &kp LCTRL     &kp LSHFT     &kp LG(C)                                                                                 &kp LG(C)   &kp LEFT   &kp DOWN    &kp UP         &kp RIGHT    &kp RSHFT   
 ___     &kp LG(F)         &select_word    &select_line  &kp LG(A)     &kp LG(V)     ___     ___     ___          &select_none   &extend_line   &extend_word     &kp LG(V)   &kp HOME   &kp PG_DN   &kp PG_UP      &kp END      ___   
 ___     &kp LS(LG(G))     &extend_word    &extend_line  &kp LG(G)                   ___     ___     &to BASE     &kp LG(A)      &select_line   &select_word                 ___        ___         ___            ___          ___   
             >;
