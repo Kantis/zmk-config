@@ -35,6 +35,7 @@
 #define RH_FN_KEYS 4
 #define SWE 5
 #define LH_PROG 7
+#define CURSOR 8
 
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
@@ -143,6 +144,114 @@ ZMK_BEHAVIOR(rpt, hold_tap,
     };
 
     macros {
+        //////////////////////////////////////////////////////////////////////////
+        //
+        // Approximation of Pascal Getreuer's Select Word macro from QMK
+        // - https://getreuer.info/posts/keyboards/select-word/index.html
+        //
+        //////////////////////////////////////////////////////////////////////////
+
+        //
+        // SELECT_WORD_DELAY defines how long the macro waits (milliseconds)
+        // after moving the cursor before it selects a word.  A larger delay
+        // may allow the macro to move to the next word upon each invocation.
+        //
+        #ifndef SELECT_WORD_DELAY
+        #define SELECT_WORD_DELAY 1
+        #endif
+
+        ZMK_MACRO(select_none,
+            wait-ms = <SELECT_WORD_DELAY>;
+            tap-ms = <SELECT_WORD_DELAY>;
+            bindings = <&kp DOWN &kp UP &kp RIGHT &kp LEFT>;
+        )
+
+        //
+        // select a word (jumps to next word upon each successive invocation)
+        //
+        select_word: select_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SELECT_WORD";
+            #binding-cells = <0>;
+            bindings = <&select_word_right>, <&select_word_left>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ZMK_MACRO(select_word_right,
+            wait-ms = <SELECT_WORD_DELAY>;
+            tap-ms = <SELECT_WORD_DELAY>;
+            bindings = <&kp LC(RIGHT) &kp LC(LEFT) &kp LC(LS(RIGHT))>;
+        )
+        ZMK_MACRO(select_word_left,
+            wait-ms = <SELECT_WORD_DELAY>;
+            tap-ms = <SELECT_WORD_DELAY>;
+            bindings = <&kp LC(LEFT) &kp LC(RIGHT) &kp LC(LS(LEFT))>;
+        )
+
+        //
+        // extend current selection by one word
+        //
+        extend_word: extend_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXTEND_WORD";
+            #binding-cells = <0>;
+            bindings = <&extend_word_right>, <&extend_word_left>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ZMK_MACRO(extend_word_right,
+            wait-ms = <SELECT_WORD_DELAY>;
+            tap-ms = <SELECT_WORD_DELAY>;
+            bindings = <&kp LC(LS(RIGHT))>;
+        )
+        ZMK_MACRO(extend_word_left,
+            wait-ms = <SELECT_WORD_DELAY>;
+            tap-ms = <SELECT_WORD_DELAY>;
+            bindings = <&kp LC(LS(LEFT))>;
+        )
+
+        //
+        // select current line
+        //
+        select_line: select_line {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SELECT_LINE";
+            #binding-cells = <0>;
+            bindings = <&select_line_right>, <&select_line_left>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ZMK_MACRO(select_line_right,
+            wait-ms = <SELECT_WORD_DELAY>;
+            tap-ms = <SELECT_WORD_DELAY>;
+            bindings = <&kp HOME &kp LS(END)>;
+        )
+        ZMK_MACRO(select_line_left,
+            wait-ms = <SELECT_WORD_DELAY>;
+            tap-ms = <SELECT_WORD_DELAY>;
+            bindings = <&kp END &kp LS(HOME)>;
+        )
+
+        //
+        // extend current selection by one line
+        //
+        extend_line: extend_line {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXTEND_LINE";
+            #binding-cells = <0>;
+            bindings = <&extend_line_right>, <&extend_line_left>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        ZMK_MACRO(extend_line_right,
+            wait-ms = <SELECT_WORD_DELAY>;
+            tap-ms = <SELECT_WORD_DELAY>;
+            bindings = <&kp LS(DOWN) &kp LS(END)>;
+        )
+        ZMK_MACRO(extend_line_left,
+            wait-ms = <SELECT_WORD_DELAY>;
+            tap-ms = <SELECT_WORD_DELAY>;
+            bindings = <&kp LS(UP) &kp LS(HOME)>;
+        )
+
+
+            
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
             label = "RGB_UG_STATUS";
             compatible = "zmk,behavior-macro";
@@ -238,7 +347,7 @@ ZMK_BEHAVIOR(rpt, hold_tap,
 &kp TAB             &kp Q           &kp W          &kp F            &kp P           &kp G                                                                                    &kp M   &kp L           &kp U             &kp Y           &kp SEMI        &kp BSLH
 &lpt RH_NUMPAD ESC  &hml LGUI A     &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                   &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O     &rpt 7 SQT
 &kp GRAVE           &kp Z           &kp X          &kp C            &kp D           &kp B   &kp BSPC                 &alt_swe   &lower    &kp RCTRL &kp RGUI     &kp RET     &kp J   &kp H           &kp COMMA         &kp DOT         &kp FSLH        &kp PG_UP
-&magic 2 0          &kp HOME        &kp END        &kp LBKT         &kp RBKT                &lt RH_FN_KEYS SPACE     &kp DEL    &kp LALT  &kp TAB   &shiftdance  &kp SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT       &kp PG_DN
+&magic 2 0          &kp HOME        &kp END        &kp LBKT         &kp RBKT                &lt CURSOR SPACE         &kp DEL    &kp LALT  &kp TAB   &shiftdance  &kp SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT       &kp PG_DN
             >;
         };
 
@@ -319,14 +428,14 @@ ___     ___              ___                     ___                    ___     
             >;
         };
 
-        layer_8 {
+        layer_Cursor {
             bindings = <
-___     ___     ___     ___     ___                                                                     ___     ___     ___     ___     ___   
-___     ___     ___     ___     ___     ___                                                     ___     ___     ___     ___     ___     ___   
-___     ___     ___     ___     ___     ___                                                     ___     ___     ___     ___     ___     ___   
-___     ___     ___     ___     ___     ___                                                     ___     ___     ___     ___     ___     ___   
-___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___   
-___     ___     ___     ___     ___             ___     ___     ___     ___     ___     ___             ___     ___     ___     ___     ___   
+___     ___               ___             ___           ___                                                                                                                 ___        ___         ___            ___          ___   
+___     ___               ___             ___           &kp DEL       ___                                                                                       ___         &kp DEL    ___         ___            ___          ___   
+___     ___               &kp LG(Z)       &kp LG(Z)     &kp BSPC      &kp LG(X)                                                                                 &kp LG(X)   &kp BSPC   &kp LG(Y)   &kp LG(Z)      ___          ___   
+___     &kp LGUI          &kp LALT        &kp LCTRL     &kp LSHFT     &kp LG(C)                                                                                 &kp LG(C)   &kp LEFT   &kp DOWN    &kp UP         &kp RIGHT    ___   
+___     &kp LG(F)         &select_word    &select_line  &kp LG(A)     &kp LG(V)     ___     ___     ___          &select_none   &extend_line   &extend_word     &kp LG(V)   &kp HOME   &kp PG_DN   &kp PG_UP      &kp END      ___   
+___     &kp LS(LG(G))     &extend_word    &extend_line  &kp LG(G)                   ___     ___     &to BASE     &kp LG(A)      &select_line   &select_word                 ___        ___         ___            ___          ___   
             >;
         };
 
