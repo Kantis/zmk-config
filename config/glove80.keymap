@@ -36,6 +36,7 @@
 #define SWE 5
 #define LH_PROG 7
 #define CURSOR 8
+#define SYMBOLS 9
 
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
@@ -342,12 +343,12 @@ ZMK_BEHAVIOR(rpt, hold_tap,
 
         base_layer {
             bindings = <
-&kp F1              &kp F2          &kp F3         &kp F4           &kp F5                                                                                                           &kp F6          &kp F7            &kp F8          &kp F9          &kp F10
-&kp EQUAL           &kp N1          &kp N2         &kp N3           &kp N4          &kp N5                                                                                   &kp N6  &kp N7          &kp N8            &kp N9          &kp N0          &kp MINUS
-&kp TAB             &kp Q           &kp W          &kp F            &kp P           &kp G                                                                                    &kp M   &kp L           &kp U             &kp Y           &kp SEMI        &kp BSLH
-&lpt RH_NUMPAD ESC  &hml LGUI A     &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                   &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O     &rpt 7 SQT
-&kp GRAVE           &kp Z           &kp X          &kp C            &kp D           &kp B   &kp BSPC                 &alt_swe   &lower    &kp RCTRL &kp RGUI     &kp RET     &kp J   &kp H           &kp COMMA         &kp DOT         &kp FSLH        &kp PG_UP
-&magic 2 0          &kp HOME        &kp END        &kp LBKT         &kp RBKT                &lt CURSOR SPACE         &kp DEL    &kp LALT  &kp TAB   &shiftdance  &kp SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT       &kp PG_DN
+&kp F1              &kp F2          &kp F3         &kp F4           &kp F5                                                                                                                   &kp F6          &kp F7            &kp F8          &kp F9          &kp F10
+&kp EQUAL           &kp N1          &kp N2         &kp N3           &kp N4          &kp N5                                                                                           &kp N6  &kp N7          &kp N8            &kp N9          &kp N0          &kp MINUS
+&kp TAB             &kp Q           &kp W          &kp F            &kp P           &kp G                                                                                            &kp M   &kp L           &kp U             &kp Y           &kp SEMI        &kp BSLH
+&lpt RH_NUMPAD ESC  &hml LGUI A     &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                            &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O     &rpt LH_PROG SQT
+&kp GRAVE           &kp Z           &kp X          &kp C            &kp D           &kp B   &kp BSPC                 &alt_swe   &lower    &kp RCTRL &kp RGUI     &kp RET             &kp J   &kp H           &kp COMMA         &kp DOT         &kp FSLH        &kp PG_UP
+&magic 2 0          &kp HOME        &kp END        &kp LBKT         &kp RBKT                &lt CURSOR SPACE         &kp DEL    &kp LALT  &kp TAB   &shiftdance  &lt SYMBOLS SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT       &kp PG_DN
             >;
         };
 
@@ -439,15 +440,15 @@ ___     &kp LS(LG(G))     &extend_word    &extend_line  &kp LG(G)               
             >;
         };
 
-        layer_9 {
+        layer_Sym {
             bindings = <
-___     ___     ___     ___     ___                                                                     ___     ___     ___     ___     ___   
-___     ___     ___     ___     ___     ___                                                     ___     ___     ___     ___     ___     ___   
-___     ___     ___     ___     ___     ___                                                     ___     ___     ___     ___     ___     ___   
-___     ___     ___     ___     ___     ___                                                     ___     ___     ___     ___     ___     ___   
-___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___   
-___     ___     ___     ___     ___             ___     ___     ___     ___     ___     ___             ___     ___     ___     ___     ___   
-            >;
+___                ___              ___               ___                ___                                                                                                           ___         ___       ___         ___           ___   
+___                &kp GRAVE        &kp LPAR          &kp RPAR           &kp COMMA          &kp SEMI                                                                     &kp SEMI      ___         ___       ___         ___           ___   
+&kp EXCLAMATION    &kp LBRC         &kp SQT           &kp DQT            &kp RBRC           &kp QMARK                                                                    &kp DOT       &kp BSPC    &kp TAB   &kp SPACE   &kp ENTER     ___   
+&kp HASH           &kp CARET        &kp EQUAL         &kp UNDERSCORE     &kp DOLLAR         &kp STAR                                                                     &kp COMMA     &kp RSHFT   &kp RCTRL &kp RALT    &kp RGUI      ___   
+&kp TILDE          &kp LESS_THAN    &kp PIPE          &kp MINUS          &kp GREATER_THAN   &kp FSLH     &kp BSLH      &kp DOT     &kp STAR      ___     ___     ___     &kp FSLH      &kp BSPC    &kp DEL   ___         ___           ___   
+&kp AT             &kp AMPERSAND    &kp LBKT          &kp RBKT           &kp PLUS                        &kp PERCENT   &kp COLON   &kp SEMI      ___     ___     ___                   ___         ___       ___         ___           ___   
+            >; 
         };
 
         layer_10 {
