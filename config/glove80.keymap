@@ -83,6 +83,23 @@ ZMK_BEHAVIOR(rpt, hold_tap,
     hold-trigger-on-release;             // delay positional check until key-release
 )
 
+// SPACE_HOLDING_TIME defines how long you need to hold (milliseconds)
+// the space thumb key to activate.  Shorter holds are treated as taps.
+#define SPACE_HOLDING_TIME 170
+
+// SPACE_REPEAT_DECAY defines how much time you have left (milliseconds)
+// after tapping a key to hold it again in order to make it auto-repeat.
+#define SPACE_REPEAT_DECAY 200 // "tap then hold" for key auto-repeat
+
+ZMK_BEHAVIOR(space, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <SPACE_HOLDING_TIME>;
+    quick-tap-ms = <SPACE_REPEAT_DECAY>;
+    retro-tap;
+    bindings = <&mo>, <&kp>;
+)
+
+
 &lt {
     tapping-term-ms = <140>;
 };
@@ -343,12 +360,12 @@ ZMK_BEHAVIOR(rpt, hold_tap,
 
         base_layer {
             bindings = <
-&kp F1              &kp F2          &kp F3         &kp F4           &kp F5                                                                                                                   &kp F6          &kp F7            &kp F8          &kp F9          &kp F10
-&kp EQUAL           &kp N1          &kp N2         &kp N3           &kp N4          &kp N5                                                                                           &kp N6  &kp N7          &kp N8            &kp N9          &kp N0          &kp MINUS
-&kp TAB             &kp Q           &kp W          &kp F            &kp P           &kp G                                                                                            &kp M   &kp L           &kp U             &kp Y           &kp SEMI        &kp BSLH
-&lpt RH_NUMPAD ESC  &hml LGUI A     &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                            &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O     &rpt LH_PROG SQT
-&kp GRAVE           &kp Z           &kp X          &kp C            &kp D           &kp B   &kp BSPC                 &alt_swe   &lower    &kp RCTRL &kp RGUI     &kp RET             &kp J   &kp H           &kp COMMA         &kp DOT         &kp FSLH        &kp PG_UP
-&magic 2 0          &kp HOME        &kp END        &kp LBKT         &kp RBKT                &lt CURSOR SPACE         &kp DEL    &kp LALT  &kp TAB   &shiftdance  &lt SYMBOLS SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT       &kp PG_DN
+&kp F1              &kp F2          &kp F3         &kp F4           &kp F5                                                                                                                      &kp F6          &kp F7            &kp F8          &kp F9          &kp F10
+&kp EQUAL           &kp N1          &kp N2         &kp N3           &kp N4          &kp N5                                                                                              &kp N6  &kp N7          &kp N8            &kp N9          &kp N0          &kp MINUS
+&kp TAB             &kp Q           &kp W          &kp F            &kp P           &kp G                                                                                               &kp M   &kp L           &kp U             &kp Y           &kp SEMI        &kp BSLH
+&lpt RH_NUMPAD ESC  &hml LGUI A     &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                               &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O     &rpt LH_PROG SQT
+&kp GRAVE           &kp Z           &kp X          &kp C            &kp D           &kp B   &kp BSPC                 &alt_swe   &lower    &kp RCTRL &kp RGUI     &kp RET                &kp J   &kp H           &kp COMMA         &kp DOT         &kp FSLH        &kp PG_UP
+&magic 2 0          &kp HOME        &kp END        &kp LBKT         &kp RBKT                &space CURSOR SPACE      &kp DEL    &kp LALT  &kp TAB   &shiftdance  &space SYMBOLS SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT       &kp PG_DN
             >;
         };
 
@@ -433,7 +450,7 @@ ___     ___              ___                     ___                    ___     
             bindings = <
 ___     ___               ___             ___           ___                                                                                                                 ___        ___         ___            ___          ___   
 ___     ___               ___             ___           &kp DEL       ___                                                                                       ___         &kp DEL    ___         ___            ___          ___   
-___     ___               &kp LG(Z)       &kp LG(Z)     &kp BSPC      &kp LG(X)                                                                                 &kp LG(X)   &kp BSPC   &kp LG(Y)   &kp LG(Z)      ___          ___   
+___     ___               &kp LG(Z)       &kp LG(Z)     &kp BSPC      &kp LG(X)                                                                                 &kp LG(X)   &kp BSPC   &kp LG(Y)   &kp LG(Z)      &kp TAB      ___   
 ___     &kp LGUI          &kp LALT        &kp LCTRL     &kp LSHFT     &kp LG(C)                                                                                 &kp LG(C)   &kp LEFT   &kp DOWN    &kp UP         &kp RIGHT    ___   
 ___     &kp LG(F)         &select_word    &select_line  &kp LG(A)     &kp LG(V)     ___     ___     ___          &select_none   &extend_line   &extend_word     &kp LG(V)   &kp HOME   &kp PG_DN   &kp PG_UP      &kp END      ___   
 ___     &kp LS(LG(G))     &extend_word    &extend_line  &kp LG(G)                   ___     ___     &to BASE     &kp LG(A)      &select_line   &select_word                 ___        ___         ___            ___          ___   
