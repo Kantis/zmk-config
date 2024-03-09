@@ -456,12 +456,12 @@ ___     &kp LS(LG(G))     &extend_word    &extend_line  &kp LG(G)               
 
         layer_Sym {
             bindings = <
-___                ___              ___               ___                ___                                                                                                           ___         ___       ___         ___           ___   
-___                &kp GRAVE        &kp LPAR          &kp RPAR           &kp COMMA          &kp SEMI                                                                     &kp SEMI      ___         ___       ___         ___           ___   
-&kp EXCLAMATION    &kp LBRC         &kp SQT           &kp DQT            &kp RBRC           &kp QMARK                                                                    &kp DOT       &kp BSPC    &kp TAB   &kp SPACE   &kp ENTER     ___   
-&kp HASH           &kp CARET        &kp EQUAL         &kp UNDERSCORE     &kp DOLLAR         &kp STAR                                                                     &kp COMMA     &kp RSHFT   &kp RCTRL &kp RALT    &kp RGUI      ___   
-&kp TILDE          &kp LESS_THAN    &kp PIPE          &kp MINUS          &kp GREATER_THAN   &kp FSLH     &kp BSLH      &kp DOT     &kp STAR      ___     ___     ___     &kp FSLH      &kp BSPC    &kp DEL   ___         ___           ___   
-&kp AT             &kp AMPERSAND    &kp LBKT          &kp RBKT           &kp PLUS                        &kp PERCENT   &kp COLON   &kp SEMI      ___     ___     ___                   ___         ___       ___         ___           ___   
+___                ___              ___               ___                ___                                                                                                           ___         ___           ___         ___           ___   
+___                &kp GRAVE        &kp SQT           &kp DQT            &kp COMMA          &kp SEMI                                                                     &kp SEMI      ___         ___           ___         ___           ___   
+&kp EXCLAMATION    &kp LBRC         &kp LPAR          &kp RPAR           &kp RBRC           &kp QMARK                                                                    &kp COMMA     &kp RSHFT   &kp RCTRL     &kp RALT    &kp RGUI      ___   
+&kp HASH           &kp CARET        &kp EQUAL         &kp UNDERSCORE     &kp DOLLAR         &kp STAR                                                                     &kp DOT       &kp BSPC    &kp TAB       &kp SPACE   &kp ENTER     ___   
+&kp TILDE          &kp LESS_THAN    &kp PIPE          &kp MINUS          &kp GREATER_THAN   &kp FSLH     &kp BSLH      &kp DOT     &kp STAR      ___     ___     ___     &kp FSLH      &kp DEL     &kp LS(TAB)   ___         ___           ___   
+&kp AT             &kp AMPERSAND    &kp LBKT          &kp RBKT           &kp PLUS                        &kp PERCENT   &kp COLON   &kp SEMI      ___     ___     ___                   ___         ___           ___         ___           ___   
             >; 
         };
 
