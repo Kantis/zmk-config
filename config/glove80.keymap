@@ -361,8 +361,8 @@ ZMK_BEHAVIOR(space, hold_tap,
 &kp EQUAL     &kp N1               &kp N2         &kp N3           &kp N4          &kp N5                                                                                              &kp N6  &kp N7          &kp N8            &kp N9          &kp N0              &kp MINUS
 &kp TAB       &kp Q                &kp W          &kp F            &kp P           &kp G                                                                                               &kp M   &kp L           &kp U             &kp Y           &kp SEMI            &kp BSLH
 &kp ESC       &hml LGUI A          &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                               &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O         &kp SQT
-&kp GRAVE     &lpt RH_NUMPAD Z     &kp X          &kp C            &kp D           &kp B   &lt RH_FN_KEYS BSPC      &alt_swe   &lower    &kp RCTRL &kp RGUI     &kp RET                &kp J   &kp H           &kp COMMA         &kp DOT         &rpt LH_PROG FSLH   &kp PG_UP
-&magic 2 0    &kp HOME             &kp END        &kp LBKT         &kp RBKT                &space CURSOR SPACE      &kp DEL    &kp LALT  &kp TAB   &shiftdance  &space SYMBOLS SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT           &kp PG_DN
+&kp GRAVE     &lpt RH_NUMPAD Z     &kp X          &kp C            &kp D           &kp B   &space RH_FN_KEYS BSPC      &alt_swe   &lower    &kp RCTRL &kp RGUI     &kp RET                &kp J   &kp H           &kp COMMA         &kp DOT         &rpt LH_PROG FSLH   &kp PG_UP
+&magic 2 0    &kp HOME             &kp END        &kp LBKT         &kp RBKT                &space CURSOR SPACE         &kp DEL    &kp LALT  &kp TAB   &shiftdance  &space SYMBOLS SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT           &kp PG_DN
             >;
         };
 
