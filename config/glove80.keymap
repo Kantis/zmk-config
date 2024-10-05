@@ -35,15 +35,17 @@
     continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; // Adding minus to the default continue list
 };
 
+// BASE
 ZMK_LAYER(base,
-  &kp F1        &kp F2               &kp F3         &kp F4           &kp F5                                                                                                                                                   &kp F6          &kp F7            &kp F8          &kp F9              &kp F10
-  &kp EQUAL     &kp N1               &kp N2         &kp N3           &kp N4          &kp N5                                                                                                                           &kp N6  &kp N7          &kp N8            &kp N9          &kp N0              &kp MINUS
-  &kp TAB       &kp Q                &kp W          &kp F            &kp P           &kp G                                                                                                                            &kp M   &kp L           &kp U             &kp Y           &kp SEMI            &kp BSLH
-  &kp ESC       &hml LGUI A          &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                                                            &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O         &kp SQT
-  &kp GRAVE     &lpt RH_NUMPAD Z     &kp X          &kp C            &kp D           &kp B   &space RH_FN_KEYS BSPC      &alt_swe                &lower                 &kp RCTRL &kp RGUI     &kp RET                &kp J   &kp H           &kp COMMA         &kp DOT         &rpt LH_PROG FSLH   &kp PG_UP
-  &magic 2 0    &kp HOME             &kp END        &kp LBKT         &kp RBKT                &space CURSOR SPACE         &mt LG(LC(LALT)) DEL    &kp LG(LC(LA(LSHIFT)))  &kp TAB   &shiftdance  &space SYMBOLS SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT           &kp PG_DN
+  &kp F1        &kp F2        &kp F3         &kp F4           &kp F5                                                                                                                                             &kp F6          &kp F7            &kp F8          &kp F9           &kp F10
+  &kp EQUAL     &kp N1        &kp N2         &kp N3           &kp N4          &kp N5                                                                                                                     &kp N6  &kp N7          &kp N8            &kp N9          &kp N0           &kp MINUS
+  &kp TAB       &kp Q         &kp W          &kp F            &kp P           &kp G                                                                                                                      &kp M   &kp L           &kp U             &kp Y           &kp SEMI         &kp BSLH
+  &kp ESC       &hml LGUI A   &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                                                      &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O      &kp SQT
+  &kp GRAVE     &lpt NUM Z    &kp X          &kp C            &kp D           &kp B   &space FN BSPC       &alt_swe                &lower                  &kp RCTRL &kp RGUI     &kp RET                &kp J   &kp H           &kp COMMA         &kp DOT         &rpt PROG FSLH   &kp PG_UP
+  &magic 2 0    &kp HOME      &kp END        &kp LBKT         &kp RBKT                &space CURSOR SPACE  &mt LG(LC(LALT)) DEL    &kp LG(LC(LA(LSHIFT)))  &kp TAB   &shiftdance  &space SYMBOLS SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT        &kp PG_DN
 )
 
+// LOWER
 ZMK_LAYER(lower,
   &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  XXX              &kp PAUSE_BREAK
   ___           XXX           XXX             XXX             XXX              &kp HOME                                                      &kp LEFT_PARENTHESIS   &kp KP_NUM  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY  &kp PRINTSCREEN
@@ -53,6 +55,7 @@ ZMK_LAYER(lower,
   &magic 2 0    &kp CAPS      &kp INS         &kp F11         &kp F12                     ___     ___     ___        ___     ___     ___                            &kp KP_N0   &kp COMMA     &kp KP_DOT    &kp KP_ENTER     ___   
 )
 
+// MAGIC
 ZMK_LAYER(magic,
   &bt BT_CLR       XXX              XXX              XXX              XXX                                                                                            XXX    XXX    XXX    XXX    &bt BT_CLR_ALL
   XXX              XXX              XXX              XXX              XXX              XXX                                                                    XXX    XXX    XXX    XXX    XXX    XXX  
@@ -62,6 +65,7 @@ ZMK_LAYER(magic,
   XXX              XXX              XXX              XXX              XXX                               &bt_0  &bt_1  &out OUT_USB  XXX    &caps_word  XXX           XXX    XXX    XXX    XXX    XXX  
 )
 
+// NUM
 ZMK_LAYER(numpad,
   ___     ___     ___     ___             ___                                                                                              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  XXX              &kp PAUSE_BREAK
   ___     ___     ___     ___             ___              ___                                                      &kp LEFT_PARENTHESIS   &kp KP_NUM  &kp KP_EQUAL  &kp FSLH      &kp KP_MULTIPLY  &kp PRINTSCREEN
@@ -71,6 +75,7 @@ ZMK_LAYER(numpad,
   ___     ___     ___     ___             ___                      ___     ___     ___      ___     ___     ___                            &kp N0      &kp N0        &kp DOT       &kp KP_ENTER     &kp TAB
 )
 
+// FN
 ZMK_LAYER(fn,
   ___     ___     ___     ___     ___                                                                                      ___     ___     ___     ___      ___   
   ___     ___     ___     ___     ___     ___                                                     ___                      ___     ___     ___     ___      ___   
@@ -80,6 +85,7 @@ ZMK_LAYER(fn,
   ___     ___     ___     ___     ___             ___     ___     ___     ___     ___     ___                              ___     ___     ___     ___      ___   
 )
 
+// SWE
 ZMK_LAYER(swe,
   ___     ___     ___           ___            ___                                                                                   ___     ___     ___    ___    ___   
   ___     ___     ___           ___            ___              ___                                                          ___     ___     ___     ___    ___    ___   
@@ -98,6 +104,7 @@ ZMK_LAYER(empty,
   ___     ___     ___     ___     ___             ___     ___     ___     ___     ___     ___             ___     ___     ___     ___     ___   
 )
 
+// LH_PROG
 ZMK_LAYER(fn_def,
   ___     ___              ___     ___             ___                                                                                                     ___     ___     ___     ___     ___   
   ___     ___              ___     ___             ___                    ___                                                                      ___     ___     ___     ___     ___     ___   
@@ -108,6 +115,7 @@ ZMK_LAYER(fn_def,
 )
 
 
+// CURSOR
 ZMK_LAYER(cursor,
   ___     ___               ___             ___           ___                                                                                                                 ___        ___         ___            ___          ___   
   ___     ___               ___             ___           &kp DEL       ___                                                                                       ___         &kp DEL    ___         ___            ___          ___   
@@ -117,6 +125,7 @@ ZMK_LAYER(cursor,
   ___     &kp LS(LG(G))     &extend_word    &extend_line  &kp LG(G)                   ___     ___     &to BASE     &kp LG(A)      &select_line   &select_word                 ___        ___         ___            ___          ___   
 )
 
+// SYMBOLS
 ZMK_LAYER(sym,
   ___                ___              ___               ___                ___                                                                                                           ___         ___           ___         ___           ___   
   ___                &kp GRAVE        &kp SQT           &kp DQT            &kp COMMA          &kp SEMI                                                                     &kp SEMI      ___         ___           ___         ___           ___   
