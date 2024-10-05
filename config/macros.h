@@ -72,13 +72,13 @@ ZMK_MOD_MORPH(select_line,
 ZMK_MACRO(select_line_right,
     wait-ms = <SELECT_WORD_DELAY>;
     tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp HOME &kp LS(END)>;
+    bindings = <&kp LG(LEFT) &kp LS(LG(RIGHT))>;
 )
 
 ZMK_MACRO(select_line_left,
     wait-ms = <SELECT_WORD_DELAY>;
     tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp END &kp LS(HOME)>;
+    bindings = <&kp LG(RIGHT) &kp LS(LG(LEFT))>;
 )
 
 
@@ -87,20 +87,20 @@ ZMK_MACRO(select_line_left,
  * - Extends current selection by one line
  */
 ZMK_MOD_MORPH(extend_line,
-    bindings = <&extend_line_right>, <&extend_line_left>;
+    bindings = <&extend_line_down>, <&extend_line_up>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-ZMK_MACRO(extend_line_right,
+ZMK_MACRO(extend_line_down,
     wait-ms = <SELECT_WORD_DELAY>;
     tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp LS(DOWN) &kp LS(END)>;
+    bindings = <&kp LS(DOWN) &kp LS(LG(RIGHT))>;
 )
 
-ZMK_MACRO(extend_line_left,
+ZMK_MACRO(extend_line_up,
     wait-ms = <SELECT_WORD_DELAY>;
     tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp LS(UP) &kp LS(HOME)>;
+    bindings = <&kp LS(UP) &kp LS(LG(LEFT))>;
 )
 
 
