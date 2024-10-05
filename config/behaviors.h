@@ -61,6 +61,17 @@ ZMK_BEHAVIOR(rpt, hold_tap,
 )
 
 
+// https://zmk.dev/docs/keymaps/behaviors/sticky-key#quick-release
+&sk {
+  quick-release;
+};
+
+ZMK_TAP_DANCE(pshft,
+  tapping-term-ms = <200>;
+  bindings = <&sk RSHFT>, <&caps_word>;
+)
+
+
 /**
  * Thumb hold_tap
  *
