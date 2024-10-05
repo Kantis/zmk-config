@@ -127,3 +127,31 @@ ZMK_MACRO(SWE_oumlaut,
 ZMK_MACRO(PROG_arrow,
     bindings = <&macro_tap &kp MINUS &kp GREATER_THAN>;
 )
+
+/**
+ * Glove80 defaults
+ */
+// Show RGB underglow indicators (bluetooth profiles, battery status, etc)
+ZMK_MACRO(rgb_ug_status_macro,
+    bindings = <&rgb_ug RGB_STATUS>;
+)
+
+// Select Bluetooth profile 1
+ZMK_MACRO(bt_0,
+    bindings = <&out OUT_BLE &bt BT_SEL 0>;
+)
+
+// Select Bluetooth profile 2
+ZMK_MACRO(bt_1,
+    bindings = <&out OUT_BLE &bt BT_SEL 1>;
+)
+
+// Select Bluetooth profile 3
+ZMK_MACRO(bt_2,
+    bindings = <&out OUT_BLE &bt BT_SEL 2>;
+)
+
+// Select Bluetooth profile 4
+ZMK_MACRO(bt_3,
+    bindings = <&out OUT_BLE &bt BT_SEL 3>;
+)

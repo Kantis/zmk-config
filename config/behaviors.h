@@ -103,3 +103,9 @@ ZMK_BEHAVIOR(alt_swe, tap_dance,
   bindings = <&kp ESC>, <&to SWE>;
 )
 
+// Glove80 magic button (from default layout)
+ZMK_HOLD_TAP(magic,
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    bindings = <&mo>, <&rgb_ug_status_macro>;
+)
