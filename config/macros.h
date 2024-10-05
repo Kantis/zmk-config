@@ -165,3 +165,29 @@ ZMK_MACRO(hyper,
 
 #define meh LGUI(LCTRL(LALT))
 
+/**
+ * Clipboard
+ */
+ZMK_MACRO(copy,
+    bindings = <&kp LGUI(C)>;
+)
+
+ZMK_MACRO(paste,
+    bindings = <&kp LGUI(V)>;
+)
+
+ZMK_MACRO(cut,
+    bindings = <&kp LGUI(X)>;
+)
+
+/**
+ * Undo + Redo
+ */
+
+ZMK_MACRO(undo,
+    bindings = <&kp LGUI(Z)>;
+)
+
+ZMK_MACRO(redo,
+    bindings = <&kp LGUI(Y)>;
+)
