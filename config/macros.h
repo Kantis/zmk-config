@@ -155,3 +155,13 @@ ZMK_MACRO(bt_2,
 ZMK_MACRO(bt_3,
     bindings = <&out OUT_BLE &bt BT_SEL 3>;
 )
+
+/**
+ * Hyper + Meh
+ */
+ZMK_MACRO(hyper,
+    bindings = <&kp LGUI &kp LCTRL &kp LALT &kp LSHIFT>;
+)
+
+#define meh LGUI(LCTRL(LALT))
+
