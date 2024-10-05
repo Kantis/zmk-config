@@ -62,25 +62,37 @@ ZMK_BEHAVIOR(rpt, hold_tap,
 
 
 /**
- * Space hold_tap
- * Used to toggle layer by holding the space key. Quickly double-tapping should start sending repeat spaces.
+ * Thumb hold_tap
+ *
+ * Used to toggle layer by holding a thumb key.
+ * Quickly double-tapping should start sending the keypress repeatedly
  */
 
-// SPACE_HOLDING_TIME defines how long you need to hold (milliseconds)
-// the space thumb key to activate.  Shorter holds are treated as taps.
-#define SPACE_HOLDING_TIME 170
+// THUMB_HOLDING_TIME defines how long you need to hold (milliseconds)
+// the thumb key to activate.  Shorter holds are treated as taps.
+#define THUMB_HOLDING_TIME 170
 
-// SPACE_REPEAT_DECAY defines how much time you have left (milliseconds)
+// THUMB_REPEAT_DECAY defines how much time you have left (milliseconds)
 // after tapping a key to hold it again in order to make it auto-repeat.
-#define SPACE_REPEAT_DECAY 200 // "tap then hold" for key auto-repeat
+#define THUMB_REPEAT_DECAY 200 // "tap then hold" for key auto-repeat
 
-ZMK_BEHAVIOR(space, hold_tap,
+ZMK_BEHAVIOR(thumb, hold_tap,
     flavor = "balanced";
-    tapping-term-ms = <SPACE_HOLDING_TIME>;
-    quick-tap-ms = <SPACE_REPEAT_DECAY>;
+    tapping-term-ms = <THUMB_HOLDING_TIME>;
+    quick-tap-ms = <THUMB_REPEAT_DECAY>;
     retro-tap;
     bindings = <&mo>, <&kp>;
 )
+
+// Used to create a thumb hold-tap with kp,kp for the DEL/Meh key
+ZMK_HOLD_TAP(thumbdel,
+    flavor = "balanced";
+    tapping-term-ms = <THUMB_HOLDING_TIME>;
+    quick-tap-ms = <THUMB_REPEAT_DECAY>;
+    retro-tap;
+    bindings = <&kp>, <&kp>;
+)
+
 
 /**
  * Tap dances
