@@ -5,6 +5,7 @@
 #define NUM 3
 #define FN 4
 #define SWE 5
+#define GAME 6
 #define PROG 7
 #define CURSOR 8
 #define SYMBOLS 9

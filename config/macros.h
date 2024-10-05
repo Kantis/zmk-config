@@ -163,21 +163,19 @@ ZMK_MACRO(hyper,
     bindings = <&kp LGUI &kp LCTRL &kp LALT &kp LSHIFT>;
 )
 
-#define meh LGUI(LCTRL(LALT))
-
 /**
  * Clipboard
  */
 ZMK_MACRO(copy,
-    bindings = <&kp LGUI(C)>;
+    bindings = <&macro_press &kp LGUI>, <&macro_tap &kp C>, <&macro_release &kp LGUI>;
 )
 
 ZMK_MACRO(paste,
-    bindings = <&kp LGUI(V)>;
+    bindings = <&macro_press &kp LGUI>, <&macro_tap &kp V>, <&macro_release &kp LGUI>;
 )
 
 ZMK_MACRO(cut,
-    bindings = <&kp LGUI(X)>;
+    bindings = <&macro_press &kp LGUI>, <&macro_tap &kp X>, <&macro_release &kp LGUI>;
 )
 
 /**
@@ -185,9 +183,9 @@ ZMK_MACRO(cut,
  */
 
 ZMK_MACRO(undo,
-    bindings = <&kp LGUI(Z)>;
+    bindings = <&macro_press &kp LGUI>, <&macro_tap &kp Z>, <&macro_release &kp LGUI>;
 )
 
 ZMK_MACRO(redo,
-    bindings = <&kp LGUI(Y)>;
+    bindings = <&macro_press &kp LGUI>, <&macro_tap &kp Y>, <&macro_release &kp LGUI>;
 )

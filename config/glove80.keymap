@@ -37,22 +37,22 @@
 
 // BASE
 ZMK_LAYER(base,
-  &kp F1        &kp F2        &kp F3         &kp F4           &kp F5                                                                                                                       &kp F6          &kp F7            &kp F8          &kp F9           &kp F10
-  &kp EQUAL     &kp N1        &kp N2         &kp N3           &kp N4          &kp N5                                                                                               &kp N6  &kp N7          &kp N8            &kp N9          &kp N0           &kp MINUS
-  &kp TAB       &kp Q         &kp W          &kp F            &kp P           &kp G                                                                                                &kp M   &kp L           &kp U             &kp Y           &kp SEMI         &kp BSLH
-  &kp ESC       &hml LGUI A   &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                                &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O      &kp SQT
-  &kp GRAVE     &lpt NUM Z    &kp X          &kp C            &kp D           &kp B   &space FN BSPC       &alt_swe       &lower     &kp RCTRL &kp RGUI     &kp RET                &kp J   &kp H           &kp COMMA         &kp DOT         &rpt PROG FSLH   &kp PG_UP
-  &magic 2 0    &kp HOME      &kp END        &kp LBKT         &kp RBKT                &space CURSOR SPACE  &mt meh DEL    &hyper     &kp TAB   &shiftdance  &space SYMBOLS SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT        &kp PG_DN
+  &kp F1        &kp F2          &kp F3         &kp F4           &kp F5                                                                                                                              &kp F6          &kp F7            &kp F8          &kp F9           &kp F10
+  &kp EQUAL     &kp N1          &kp N2         &kp N3           &kp N4          &kp N5                                                                                                      &kp N6  &kp N7          &kp N8            &kp N9          &kp N0           &kp MINUS
+  &kp TAB       &kp Q           &kp W          &kp F            &kp P           &kp G                                                                                                       &kp M   &kp L           &kp U             &kp Y           &kp SEMI         &kp BSLH
+  &kp ESC       &hml LGUI A     &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                                       &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O      &kp SQT
+  &kp GRAVE     &lpt LOWER Z    &kp X          &kp C            &kp D           &kp B   &space FN BSPC       &alt_swe              &lower     &kp RCTRL &kp RGUI     &kp RET                &kp J   &kp H           &kp COMMA         &kp DOT         &rpt PROG FSLH   &kp PG_UP
+  &magic 2 0    &kp HOME        &kp END        &kp LBKT         &kp RBKT                &space CURSOR SPACE  &mt LG(LC(LALT)) DEL    &hyper     &kp TAB   &shiftdance  &space SYMBOLS SPACE           &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT        &kp PG_DN
 )
 
 // LOWER
 ZMK_LAYER(lower,
-  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  XXX              &kp PAUSE_BREAK
-  ___           XXX           XXX             XXX             XXX              &kp HOME                                                      &kp LEFT_PARENTHESIS   &kp KP_NUM  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY  &kp PRINTSCREEN
-  ___           XXX           XXX             &kp UP_ARROW    XXX              &kp END                                                       &kp RIGHT_PARENTHESIS  &kp KP_N7   &kp KP_N8     &kp KP_N9     &kp KP_MINUS     &kp SCROLLLOCK
-  ___           XXX           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_UP                                                     &kp PERCENT            &kp KP_N4   &kp KP_N5     &kp KP_N6     &kp KP_PLUS      XXX  
-  ___           &kp K_APP     XXX             &kp F11         &kp F12          &kp PG_DN  ___     ___     &to BASE   ___     ___     ___     &kp COMMA              &kp KP_N1   &kp KP_N2     &kp KP_N3     &kp KP_ENTER     ___   
-  &magic 2 0    &kp CAPS      &kp INS         &kp F11         &kp F12                     ___     ___     ___        ___     ___     ___                            &kp KP_N0   &kp COMMA     &kp KP_DOT    &kp KP_ENTER     ___   
+  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  XXX               &kp PAUSE_BREAK
+  ___           XXX           XXX             XXX             XXX              &kp HOME                                                                       &kp LPAR     XXX         &kp EQUAL     &kp SLASH     &kp KP_MULTIPLY   &kp PRINTSCREEN
+  ___           XXX           XXX             &kp UP_ARROW    XXX              &kp END                                                                        &kp RPAR     &kp N7      &kp N8        &kp N9        &kp MINUS         XXX
+  ___           XXX           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_UP                                                                      &kp PERCENT  &kp N4      &kp N5        &kp N6        &kp PLUS          XXX
+  ___           &kp K_APP     XXX             &kp F11         &kp F12          &kp PG_DN  ___            ___        &to BASE   ___     ___     ___            &kp COMMA    &kp N1      &kp N2        &kp N3        &kp ENTER         &kp TAB
+  &magic 2 0    &kp CAPS      &kp INS         &kp F11         &kp F12                     &to CURSOR     &to GAME   ___        ___     ___     &to SYMBOLS                 &kp N0      &kp COMMA     &kp DOT       &kp ENTER         &kp TAB
 )
 
 // MAGIC
@@ -67,22 +67,22 @@ ZMK_LAYER(magic,
 
 // NUM
 ZMK_LAYER(numpad,
-  ___     ___     ___     ___             ___                                                                                              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  XXX              &kp PAUSE_BREAK
-  ___     ___     ___     ___             ___              ___                                                      &kp LEFT_PARENTHESIS   &kp KP_NUM  &kp KP_EQUAL  &kp FSLH      &kp KP_MULTIPLY  &kp PRINTSCREEN
-  ___     ___     ___     ___             ___              ___                                                      &kp RIGHT_PARENTHESIS  &kp N7      &kp N8        &kp N9        &kp MINUS     XXX
-  ___     ___     ___     ___             ___              ___                                                      &kp PERCENT            &kp N4      &kp N5        &kp N6        &kp KP_PLUS      XXX  
-  ___     ___     ___     ___             ___              ___     ___     ___     ___      ___     ___     ___     &kp COMMA              &kp N1      &kp N2        &kp N3        &kp KP_ENTER     &kp LS(TAB)   
-  ___     ___     ___     ___             ___                      ___     ___     ___      ___     ___     ___                            &kp N0      &kp N0        &kp DOT       &kp KP_ENTER     &kp TAB
+  ___     ___     ___     ___             ___                                                                                     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  XXX              &kp PAUSE_BREAK
+  ___     ___     ___     ___             ___              ___                                                      &kp LPAR      &kp KP_NUM  &kp KP_EQUAL  &kp FSLH      &kp KP_MULTIPLY  &kp PRINTSCREEN
+  ___     ___     ___     ___             ___              ___                                                      &kp RPAR      &kp N7      &kp N8        &kp N9        &kp KP_MINUS     XXX
+  ___     ___     ___     ___             ___              ___                                                      &kp PERCENT   &kp N4      &kp N5        &kp N6        &kp KP_PLUS      XXX
+  ___     ___     ___     ___             ___              ___     ___     ___     ___      ___     ___     ___     &kp COMMA     &kp N1      &kp N2        &kp N3        &kp KP_ENTER     XXX
+  ___     ___     ___     ___             ___                      ___     ___     ___      ___     ___     ___                   &kp N0      &kp N0        &kp DOT       &kp KP_ENTER     XXX
 )
 
 // FN
 ZMK_LAYER(fn,
-  ___     ___     ___     ___     ___                                                                                      ___     ___     ___     ___      ___   
-  ___     ___     ___     ___     ___     ___                                                     ___                      ___     ___     ___     ___      ___   
-  ___     ___     ___     ___     ___     ___                                                     &kp LEFT_PARENTHESIS     &kp F7  &kp F8  &kp F9  &kp F10  ___   
-  ___     ___     ___     ___     ___     ___                                                     &kp RIGHT_PARENTHESIS    &kp F4  &kp F5  &kp F6  &kp F11  ___   
-  ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     &kp COLON                &kp F1  &kp F2  &kp F3  &kp F12  ___   
-  ___     ___     ___     ___     ___             ___     ___     ___     ___     ___     ___                              ___     ___     ___     ___      ___   
+  ___     ___     ___     ___     ___                                                                         ___     ___     ___     ___      ___   
+  ___     ___     ___     ___     ___     ___                                                     ___         ___     ___     ___     ___      ___   
+  ___     ___     ___     ___     ___     ___                                                     &kp LPAR    &kp F7  &kp F8  &kp F9  &kp F10  ___   
+  ___     ___     ___     ___     ___     ___                                                     &kp RPAR    &kp F4  &kp F5  &kp F6  &kp F11  ___   
+  ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     &kp COLON   &kp F1  &kp F2  &kp F3  &kp F12  ___   
+  ___     ___     ___     ___     ___             ___     ___     ___     ___     ___     ___                 ___     ___     ___     ___      ___   
 )
 
 // SWE
@@ -95,23 +95,24 @@ ZMK_LAYER(swe,
   ___     ___     &SWE_aring    &SWE_aumlaut   &SWE_oumlaut             ___     ___          ___     ___     ___     ___             ___     ___     ___    ___    ___   
 )
 
-ZMK_LAYER(empty,
-  ___     ___     ___     ___     ___                                                                     ___     ___     ___     ___     ___   
-  ___     ___     ___     ___     ___     ___                                                     ___     ___     ___     ___     ___     ___   
-  ___     ___     ___     ___     ___     ___                                                     ___     ___     ___     ___     ___     ___   
-  ___     ___     ___     ___     ___     ___                                                     ___     ___     ___     ___     ___     ___   
-  ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___   
-  ___     ___     ___     ___     ___             ___     ___     ___     ___     ___     ___             ___     ___     ___     ___     ___   
+// GAME
+ZMK_LAYER(game,
+  &kp F1     &kp F2      &kp F3   &kp F4  &kp F5                                                                                          &kp F6  &kp F7  &kp F8      &kp F9    &kp F10  
+  &kp EQUAL  &kp N1      &kp N2   &kp N3  &kp N4  &kp N5                                                                          &kp N6  &kp N7  &kp N8  &kp N9      &kp N0    &kp BSLH
+  &kp EQUAL  &kp B       &kp B    &kp N   &kp M   &kp SQT                                                                         &kp B   &kp N   &kp M   &kp COMMA   &kp DOT   &kp FSLH
+  &kp T      &kp TAB     &kp Q    &kp W   &kp E   &kp R                                                                           &kp T   &kp Y   &kp U   &kp I       &kp O     &kp P
+  &kp G      &kp LSHFT   &kp A    &kp S   &kp D   &kp F   &kp ESC     &kp ENTER    ___          &kp BSPC  &kp DEL     ___         &kp G   &kp H   &kp J   &kp K       &kp L     &kp P
+  &kp V      &kp LCTRL   &kp Z    &kp X   &kp C           &kp SPACE   &kp LALT     &kp LGUI     ___       &kp TAB     &kp SPACE           &kp Y   &kp U   &kp I       &kp O     &kp P
 )
 
 // PROG
 ZMK_LAYER(prog,
-  ___     ___              ___     ___             ___                                                                                                     ___     ___     ___     ___     ___   
-  ___     ___              ___     ___             ___                    ___                                                                      ___     ___     ___     ___     ___     ___   
-  ___     ___              &kp LESS_THAN           &kp GREATER_THAN       &kp COLON        ___                                                     ___     ___     ___     ___     ___     ___   
-  ___     &kp LEFT_BRACE   &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  ___                                                     ___     ___     ___     ___     ___     ___   
-  ___     &kp COMMA        &kp LESS_THAN           &kp GREATER_THAN       &kp KP_MULTIPLY  ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___   
-  ___     ___              ___                     ___                    ___                      ___     ___     ___     ___     ___     ___             ___     ___     ___     ___     ___   
+  ___     ___         ___        ___        ___                                                                         ___     ___     ___     ___     ___   
+  ___     ___         ___        ___        ___         ___                                                     ___     ___     ___     ___     ___     ___   
+  ___     ___         &kp LT     &kp GT     &kp COLON   ___                                                     ___     ___     ___     ___     ___     ___   
+  ___     &kp LBRC    &kp LPAR   &kp RPAR   &kp RBRC    ___                                                     ___     ___     ___     ___     ___     ___   
+  ___     &kp COMMA   &kp LT     &kp GT     &kp STAR    ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___   
+  ___     ___         ___        ___        ___                 ___     ___     ___     ___     ___     ___             ___     ___     ___     ___     ___   
 )
 
 
@@ -127,10 +128,11 @@ ZMK_LAYER(cursor,
 
 // SYMBOLS
 ZMK_LAYER(sym,
-  ___                ___              ___               ___                ___                                                                                                           ___         ___           ___         ___           ___   
-  ___                &kp GRAVE        &kp SQT           &kp DQT            &kp COMMA          &kp SEMI                                                                     &kp SEMI      ___         ___           ___         ___           ___   
-  &kp EXCLAMATION    &kp LBRC         &kp LPAR          &kp RPAR           &kp RBRC           &kp QMARK                                                                    &kp COMMA     &kp RSHFT   &kp RCTRL     &kp RALT    &kp RGUI      ___   
-  &kp HASH           &kp CARET        &kp EQUAL         &kp UNDERSCORE     &kp DOLLAR         &kp STAR                                                                     &kp DOT       &kp BSPC    &kp TAB       &kp SPACE   &kp ENTER     ___   
-  &kp TILDE          &kp LESS_THAN    &kp PIPE          &kp MINUS          &kp GREATER_THAN   &kp FSLH     &kp BSLH      &kp DOT     &kp STAR      ___     ___     ___     &kp FSLH      &kp DEL     &kp LS(TAB)   ___         ___           ___   
-  &kp AT             &kp AMPERSAND    &kp LBKT          &kp RBKT           &kp PLUS                        &kp PERCENT   &kp COLON   &kp SEMI      ___     ___     ___                   ___         ___           ___         ___           ___   
+  ___                ___              ___               ___                ___                                                                                                                ___         ___           ___         ___           ___   
+  ___                &kp GRAVE        &kp SQT           &kp DQT            &kp COMMA          &kp SEMI                                                                          &kp SEMI      ___         ___           ___         ___           ___   
+  &kp EXCLAMATION    &kp LBRC         &kp LPAR          &kp RPAR           &kp RBRC           &kp QMARK                                                                         &kp COMMA     &kp RSHFT   &kp RCTRL     &kp RALT    &kp RGUI      ___   
+  &kp HASH           &kp CARET        &kp EQUAL         &kp UNDERSCORE     &kp DOLLAR         &kp STAR                                                                          &kp DOT       &kp BSPC    &kp TAB       &kp SPACE   &kp ENTER     ___   
+  &kp TILDE          &kp LESS_THAN    &kp PIPE          &kp MINUS          &kp GREATER_THAN   &kp FSLH     &kp BSLH      &kp DOT     &kp STAR      ___          ___     ___     &kp FSLH      &kp DEL     &kp LS(TAB)   ___         ___           ___   
+  &kp AT             &kp AMPERSAND    &kp LBKT          &kp RBKT           &kp PLUS                        &kp PERCENT   &kp COLON   &kp SEMI      &to BASE     ___     ___                   ___         ___           ___         ___           ___   
 )
+
