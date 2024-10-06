@@ -157,13 +157,6 @@ ZMK_MACRO(bt_3,
 )
 
 /**
- * Hyper + Meh
- */
-ZMK_MACRO(hyper,
-    bindings = <&kp LGUI &kp LCTRL &kp LALT &kp LSHIFT>;
-)
-
-/**
  * Clipboard
  */
 ZMK_MACRO(copy,
