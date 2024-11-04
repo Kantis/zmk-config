@@ -12,6 +12,18 @@
 // may allow the macro to move to the next word upon each invocation.
 #define SELECT_WORD_DELAY 1
 
+// reuse basic mod-morph scheme
+#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
+    ZMK_MOD_MORPH(NAME, \
+        mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
+        bindings = <BINDING1>, <BINDING2>; \
+    )
+
+// tap: left paren | shift + tap: < 
+SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LESS_THAN)
+// tap: right paren | shift + tap: >
+SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GREATER_THAN)
+
 ZMK_MACRO(select_none,
     wait-ms = <SELECT_WORD_DELAY>;
     tap-ms = <SELECT_WORD_DELAY>;
@@ -126,6 +138,11 @@ ZMK_MACRO(SWE_oumlaut,
 // -> 
 ZMK_MACRO(PROG_arrow,
     bindings = <&macro_tap &kp MINUS &kp GREATER_THAN>;
+)
+
+SIMPLE_MORPH(dot_colon, SFT, &kp DOT, &kp COLON)
+ZMK_MACRO(PROG_elvis,
+    bindings = <&macro_tap &kp QUESTION &dot_colon>;
 )
 
 /**

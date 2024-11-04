@@ -26,17 +26,6 @@
 /* Defines */
 #define ___ &trans
 #define XXX &none
-
-// reuse basic mod-morph scheme
-#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
-    ZMK_MOD_MORPH(NAME, \
-        mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
-        bindings = <BINDING1>, <BINDING2>; \
-    )
-
-// tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
-SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LESS_THAN)
-SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GREATER_THAN)
  
 &lt {
     tapping-term-ms = <140>;
