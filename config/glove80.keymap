@@ -27,6 +27,17 @@
 #define ___ &trans
 #define XXX &none
 
+// reuse basic mod-morph scheme
+#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
+    ZMK_MOD_MORPH(NAME, \
+        mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
+        bindings = <BINDING1>, <BINDING2>; \
+    )
+
+// tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
+SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LESS_THAN)
+SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GREATER_THAN)
+ 
 &lt {
     tapping-term-ms = <140>;
 };
@@ -41,8 +52,8 @@ ZMK_LAYER(base,
   &kp EQUAL     &kp N1          &kp N2         &kp N3           &kp N4          &kp N5                                                                                                                               &kp N6  &kp N7          &kp N8            &kp N9          &kp N0           &kp MINUS
   &kp TAB       &kp Q           &kp W          &kp F            &kp P           &kp G                                                                                                                                &kp M   &kp L           &kp U             &kp Y           &kp SEMI         &kp BSLH
   &kp ESC       &hml LGUI A     &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                                                                &kp K   &hmr RSHFT N    &hmr RCTRL E      &hmr RALT I     &hmr RGUI O      &kp SQT
-  &kp GRAVE     &lpt LOWER Z    &kp X          &kp C            &kp D           &kp B   &thumb FN BSPC       &alt_swe                      &lower                   &kp RCTRL   &kp RGUI     &kp RET                 &kp J   &kp H           &kp COMMA         &kp DOT         &rpt PROG FSLH   &pshft
-  &magic 2 0    &kp HOME        &kp END        &kp LBKT         &kp RBKT                &thumb CURSOR SPACE  &thumbdel LG(LC(LALT)) DEL    &kp LS(LG(LC(LALT)))     &kp TAB     &shiftdance  &thumb SYMBOLS SPACE            &kp LEFT        &kp DOWN          &kp UP          &kp RIGHT        &kp PG_DN
+  &kp GRAVE     &lpt LOWER Z    &lpt NUM X     &kp C            &kp D           &kp B   &thumb FN BSPC       &alt_swe                      &lower                   &kp RCTRL   &kp RGUI     &kp RET                 &kp J   &kp H           &kp COMMA         &kp DOT         &rpt PROG FSLH   &pshft
+  &magic 2 0    &kp LEFT        &kp DOWN       &kp UP           &kp RIGHT               &thumb CURSOR SPACE  &thumbdel LG(LC(LALT)) DEL    &kp LS(LG(LC(LALT)))     &kp TAB     &shiftdance  &thumb SYMBOLS SPACE            &lpar_lt        &kp LBKT          &kp RBKT        &rpar_gt         &kp PG_DN
 )
 
 // LOWER
@@ -67,12 +78,12 @@ ZMK_LAYER(magic,
 
 // NUM
 ZMK_LAYER(numpad,
-  ___     ___     ___     ___             ___                                                                                     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  XXX              &kp PAUSE_BREAK
-  ___     ___     ___     ___             ___              ___                                                      &kp LPAR      &kp KP_NUM  &kp KP_EQUAL  &kp FSLH      &kp KP_MULTIPLY  &kp PRINTSCREEN
-  ___     ___     ___     ___             ___              ___                                                      &kp RPAR      &kp N7      &kp N8        &kp N9        &kp KP_MINUS     XXX
-  ___     ___     ___     ___             ___              ___                                                      &kp PERCENT   &kp N4      &kp N5        &kp N6        &kp KP_PLUS      XXX
-  ___     ___     ___     ___             ___              ___     ___     ___     ___      ___     ___     ___     &kp COMMA     &kp N1      &kp N2        &kp N3        &kp KP_ENTER     XXX
-  ___     ___     ___     ___             ___                      ___     ___     ___      ___     ___     ___                   &kp N0      &kp N0        &kp DOT       &kp KP_ENTER     XXX
+  ___     ___     ___     ___             ___                                                                                          &kp C_MUTE      &kp C_VOL_DN      &kp C_VOL_UP    XXX              &kp PAUSE_BREAK
+  ___     ___     ___     ___             ___              ___                                                           &kp LPAR      &kp KP_NUM      &kp KP_EQUAL      &kp FSLH        &kp KP_MULTIPLY  &kp PRINTSCREEN
+  ___     ___     ___     ___             ___              ___                                                           &kp RPAR      &kp N7          &kp N8            &kp N9          &kp KP_MINUS     XXX
+  ___     ___     ___     ___             ___              ___                                                           &kp PERCENT   &kp N4          &kp N5            &kp N6          &kp KP_PLUS      XXX
+  ___     ___     ___     ___             ___              ___     ___     ___     ___      ___     ___      &kp RET     &kp COMMA     &kp N1          &kp N2            &kp N3          &kp KP_ENTER     XXX
+  ___     ___     ___     ___             ___                      ___     ___     ___      ___     &kp N0   &kp SPACE                 &lpar_lt        &kp LBKT          &kp RBKT        &rpar_gt         &kp PG_DN
 )
 
 // FN
