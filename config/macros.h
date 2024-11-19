@@ -197,5 +197,5 @@ ZMK_MACRO(undo,
 )
 
 ZMK_MACRO(redo,
-    bindings = <&macro_press &kp LGUI>, <&macro_tap &kp Y>, <&macro_release &kp LGUI>;
+    bindings = <&macro_press &kp LGUI>, <&macro_press &kp LSFT>, <&macro_tap &kp Z>, <&macro_release &kp LSFT>, <&macro_release &kp LGUI>;
 )
