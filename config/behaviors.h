@@ -121,9 +121,9 @@ ZMK_BEHAVIOR(shiftdance, tap_dance,
   bindings = <&kp RSHFT>, <&caps_word>, <&kp CAPSLOCK>;
 )
 
-ZMK_BEHAVIOR(alt_swe, tap_dance,
+ZMK_BEHAVIOR(tdnum, tap_dance,
   tapping-term-ms = <200>;
-  bindings = <&kp ESC>, <&to SWE>;
+  bindings = <&mo NUM>, <&to NUM>;
 )
 
 // Glove80 magic button (from default layout)

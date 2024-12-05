@@ -4,9 +4,8 @@
 #define MAGIC 2
 #define NUM 3
 #define FN 4
-#define SWE 5
-#define GAME 6
-#define PROG 7
-#define CURSOR 8
-#define SYMBOLS 9
+#define GAME 5
+#define PROG 6
+#define CURSOR 7
+#define SYMBOLS 8
 
