@@ -19,6 +19,9 @@
         bindings = <BINDING1>, <BINDING2>; \
     )
 
+// tap: " | shift-tap: '
+SIMPLE_MORPH(quotes, SFT, &kp DQT, &kp SQT)
+
 // tap: left paren | shift + tap: < 
 SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LESS_THAN)
 // tap: right paren | shift + tap: >
