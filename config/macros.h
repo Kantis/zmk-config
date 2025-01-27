@@ -123,15 +123,15 @@ ZMK_MACRO(extend_line_up,
  * Swedish special characters
  */
 ZMK_MACRO(SWE_aring,
-    bindings = <&macro_press &kp LALT>, <&macro_tap &kp W>, <&macro_release &kp LALT>;
+    bindings = <&macro_press &kp RALT>, <&macro_tap &kp W>, <&macro_release &kp RALT>;
 )
 
 ZMK_MACRO(SWE_aumlaut,
-    bindings = <&macro_press &kp LALT>, <&macro_tap &kp A>, <&macro_release &kp LALT>;
+    bindings = <&macro_press &kp RALT>, <&macro_tap &kp A>, <&macro_release &kp RALT>;
 )
 
 ZMK_MACRO(SWE_oumlaut,
-    bindings = <&macro_press &kp LALT>, <&macro_tap &kp O>, <&macro_release &kp LALT>;
+    bindings = <&macro_press &kp RALT>, <&macro_tap &kp O>, <&macro_release &kp RALT>;
 )
 
 /**
