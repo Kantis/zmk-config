@@ -69,10 +69,10 @@ ZMK_LAYER(magic,
 // NUM
 ZMK_LAYER(numpad,
   ___     ___           ___           ___            ___                                                                                                             &kp C_MUTE      &kp C_VOL_DN      &kp C_VOL_UP    XXX              &kp PAUSE_BREAK
-  ___     ___           ___           ___            ___               ___                                                                             &kp LPAR      &kp KP_NUM      &kp KP_EQUAL      &kp FSLH        &kp KP_MULTIPLY  &kp PRINTSCREEN
+  ___     ___           ___           ___            ___               ___                                                                             &kp LPAR      XXX             &kp KP_EQUAL      &kp FSLH        &kp KP_MULTIPLY  &kp PRINTSCREEN
   ___     ___           ___           ___            &kp LS(TAB)       ___                                                                             &kp RPAR      &kp N7          &kp N8            &kp N9          &kp KP_MINUS     XXX
-  ___     &hml LGUI A   &hml LALT R   &hml LCTRL S   &hml LSHFT BSPC   &kp DEL                                                                         &kp PERCENT   &kp N4          &kp N5            &kp N6          &kp KP_PLUS      XXX
-  ___     ___           ___           ___            &kp TAB           ___       ___     ___     ___                      ___     ___      &kp RET     &kp COMMA     &kp N1          &kp N2            &kp N3          &kp KP_ENTER     XXX
+  ___     &hml LGUI A   &hml LALT R   &hml LCTRL S   &hml LSHFT BSPC   &kp DEL                                                                         &kp COMMA     &kp N4          &kp N5            &kp N6          &kp KP_PLUS      XXX
+  ___     ___           ___           ___            &kp TAB           ___       ___     ___     ___                      ___     ___      &kp RET     &kp DOT       &kp N1          &kp N2            &kp N3          &kp KP_ENTER     XXX
   ___     ___           ___           ___            ___                         ___     ___     ___                      ___     &kp N0   &kp SPACE                 &lpar_lt        &kp LBKT          &kp RBKT        &rpar_gt         &kp PG_DN
 )
 
