@@ -27,18 +27,17 @@
 #define ___ &trans
 #define XXX &none
 
-#define GREEN  0x00ff00
-#define RED    0xff0000
-#define BLUE   0x0000ff
-#define TEAL   0x008080
-#define ORANGE 0xffa500
-#define YELLOW 0xffff00
-#define GOLD   0xffd700
-#define PURPLE 0x800080
-#define PINK   0xffc0cb
+#define GREEN  0x40a02b
+#define RED    0xd20f39
+#define BLUE   0x1e66f5
+#define TEAL   0x179299
+#define ORANGE 0xfe640b
+#define YELLOW 0xdf8e1d
+#define GOLD   0xdc8a78
+#define PURPLE 0x8839ef
+#define PINK   0xea76cb
 #define WHITE  0xffffff
-#define AQUA   0x7de6f2
-#define ROSE   0xf27dbb
+#define AQUA   0x04a5e5
 #define ______ 0x000000
 #define BLACK  0x000000
  
@@ -199,7 +198,7 @@ ZMK_LAYER(sym,
             bindings = <
                 &ug TEAL    &ug TEAL    &ug TEAL   &ug TEAL    &ug TEAL                                                                                                 &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
                 &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                        &ug ______ &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ROSE   &ug ROSE    &ug ______  &ug PINK                                                                          &ug PINK   &ug ______  &ug ROSE    &ug ROSE    &ug ______  &ug ______  
+                &ug ______  &ug ______  &ug PINK   &ug PINK    &ug ______  &ug PINK                                                                          &ug PINK   &ug ______  &ug PINK    &ug PINK    &ug ______  &ug ______  
                 &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug PINK                                                                          &ug PINK   &ug PURPLE  &ug PURPLE  &ug PURPLE  &ug PURPLE  &ug ______
                 &ug ______  &ug AQUA    &ug AQUA   &ug AQUA    &ug ______  &ug PINK   &ug ______ &ug ______ &ug ______   &ug AQUA    &ug AQUA     &ug AQUA   &ug PINK   &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  
                 &ug ______  &ug ______  &ug AQUA   &ug AQUA    &ug ______             &ug ______ &ug ______ &ug GREEN    &ug GREEN   &ug AQUA     &ug AQUA              &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
