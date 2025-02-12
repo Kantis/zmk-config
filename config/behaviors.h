@@ -91,7 +91,7 @@ ZMK_BEHAVIOR(thumb, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <THUMB_HOLDING_TIME>;
     quick-tap-ms = <THUMB_REPEAT_DECAY>;
-    retro-tap;
+    // retro-tap;
     bindings = <&mo>, <&kp>;
 )
 
@@ -100,7 +100,7 @@ ZMK_HOLD_TAP(thumbdel,
     flavor = "balanced";
     tapping-term-ms = <THUMB_HOLDING_TIME>;
     quick-tap-ms = <THUMB_REPEAT_DECAY>;
-    retro-tap;
+    // retro-tap;
     bindings = <&kp>, <&kp>;
 )
 
