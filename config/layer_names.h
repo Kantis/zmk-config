@@ -8,4 +8,5 @@
 #define PROG 6
 #define CURSOR 7
 #define SYMBOLS 8
+#define MOUSE 9
 

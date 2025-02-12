@@ -14,6 +14,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #include "zmk-nodefree-config/include/zmk-helpers/helper.h"
 #include "zmk-nodefree-config/include/zmk-helpers/key-labels/glove80.h"
@@ -64,7 +65,7 @@ ZMK_LAYER(base,
   &kp EQUAL     &lpar_lt        &kp LBKT       &kp RBKT         &rpar_gt        &kp COLON                                                                                                                                                       XXX     XXX            &kp EQUAL      &kp MINUS     XXX              &kp MINUS
   &kp TAB       &kp Q           &kp W          &kp F            &kp P           &kp G                                                                                                                                                           &kp M   &kp L          &kp U          &kp Y         &kp SEMI         &kp BSLH
   &kp ESC       &hml LGUI A     &hml LALT R    &hml LCTRL S     &hml LSHFT T    &kp V                                                                                                                                                           &kp K   &hmr RSHFT N   &hmr RCTRL E   &hmr RALT I   &hmr RGUI O      &kp SQT
-  &kp GRAVE     &lpt LOWER Z    &lpt NUM X     &kp C            &kp D           &kp B   &thumb FN BSPC       &tdnum                        &lower                   &kp RGUI                         &kp LG(LC(LALT))   &kp RET                 &kp J   &kp H          &kp COMMA      &kp DOT       &rpt PROG FSLH   &pshft
+  &lpt MOUSE GRAVE     &lpt LOWER Z    &lpt NUM X     &kp C            &kp D           &kp B   &thumb FN BSPC       &tdnum                        &lower                   &kp RGUI                         &kp LG(LC(LALT))   &kp RET                 &kp J   &kp H          &kp COMMA      &kp DOT       &rpt PROG FSLH   &pshft
   &magic 2 0    &kp N0          &SWE_aring     &SWE_aumlaut     &SWE_oumlaut            &thumb CURSOR SPACE  &thumbdel LG(LC(LALT)) DEL    &kp LS(LG(LC(LALT)))     &thumbdel LS(LG(LC(LALT))) TAB   &shiftdance        &thumb SYMBOLS SPACE            &kp LEFT       &kp DOWN       &kp UP        &kp RIGHT        &kp PG_DN
 )
 
@@ -150,6 +151,15 @@ ZMK_LAYER(sym,
   &kp AT             &kp AMPERSAND    &kp LBKT          &kp RBKT           &kp PLUS                        &kp PERCENT   &kp COLON   &to BASE                  &to BASE     ___     ___                   ___         ___           ___         ___           ___   
 )
 
+// MOUSE LAYER 
+ZMK_LAYER(mouse,
+  ___   ___   ___   ___   ___                                                                         ___             ___             ___           ___              ___   
+  ___   ___   ___   ___   ___   ___                                                             ___   ___             ___             ___           ___              ___   
+  ___   ___   ___   ___   ___   ___                                                             ___   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  ___   
+  ___   ___   ___   ___   ___   ___                                                             ___   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  ___   
+  ___   ___   ___   ___   ___   ___   ___   ___   ___           ___       ___        &mkp MB3   ___   &kp  LEFT       &kp  DOWN       &kp  UP       &kp  RIGHT       ___   
+  ___   ___   ___   ___   ___         ___   ___   &to BASE      &to BASE  &mkp MB2   &mkp MB1         ___             ___             ___           ___              ___   
+)
 
 / {
     underglow-layer {
