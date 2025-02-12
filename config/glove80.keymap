@@ -27,17 +27,26 @@
 #define ___ &trans
 #define XXX &none
 
-#define GREEN  0x40a02b
+// Rosewater
+#define GOLD   0xdc8a78
+// Flamingo
+// #define FLAMINGO 0xdd7878
+#define PINK   0xea76cb
+// Mauve
+#define PURPLE 0x8839ef
 #define RED    0xd20f39
-#define BLUE   0x1e66f5
-#define TEAL   0x179299
+// Peach
 #define ORANGE 0xfe640b
 #define YELLOW 0xdf8e1d
-#define GOLD   0xdc8a78
-#define PURPLE 0x8839ef
-#define PINK   0xea76cb
+#define GREEN  0x40a02b
+#define TEAL   0x179299
+#define SKY    0x04a5e5
+// Sapphire
+// #define SAPPHIRE  0x209fb5
+#define BLUE   0x1e66f5
+// Lavendar
+// #define LAVENDAR 0x7287fd
 #define WHITE  0xffffff
-#define AQUA   0x04a5e5
 #define ______ 0x000000
 #define BLACK  0x000000
  
@@ -182,6 +191,18 @@ ZMK_LAYER(sym,
             layer-id = <SYMBOLS>;
         };
 
+        fn {
+            bindings = <
+                &ug BLUE    &ug BLUE    &ug BLUE   &ug BLUE    &ug BLUE                                                                                                  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
+                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                         &ug ______ &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
+                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                         &ug ______ &ug BLUE    &ug BLUE    &ug BLUE    &ug ______  &ug ______  
+                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                         &ug ______ &ug BLUE    &ug BLUE    &ug BLUE    &ug ______  &ug ______
+                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______ &ug ______ &ug ______ &ug ______    &ug ______  &ug ______   &ug ______ &ug ______ &ug BLUE    &ug BLUE    &ug BLUE    &ug ______  &ug ______  
+                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______             &ug ______ &ug ______ &ug ______    &ug ______  &ug ______   &ug ______            &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
+                >;
+            layer-id = <FN>;
+        };
+
         num {
             bindings = <
                 &ug GOLD    &ug GOLD    &ug GOLD   &ug GOLD    &ug GOLD                                                                                                  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
@@ -200,8 +221,8 @@ ZMK_LAYER(sym,
                 &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                        &ug ______ &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
                 &ug ______  &ug ______  &ug PINK   &ug PINK    &ug ______  &ug PINK                                                                          &ug PINK   &ug ______  &ug PINK    &ug PINK    &ug ______  &ug ______  
                 &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug PINK                                                                          &ug PINK   &ug PURPLE  &ug PURPLE  &ug PURPLE  &ug PURPLE  &ug ______
-                &ug ______  &ug AQUA    &ug AQUA   &ug AQUA    &ug ______  &ug PINK   &ug ______ &ug ______ &ug ______   &ug AQUA    &ug AQUA     &ug AQUA   &ug PINK   &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  
-                &ug ______  &ug ______  &ug AQUA   &ug AQUA    &ug ______             &ug ______ &ug ______ &ug GREEN    &ug GREEN   &ug AQUA     &ug AQUA              &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
+                &ug ______  &ug SKY     &ug SKY    &ug SKY     &ug ______  &ug PINK   &ug ______ &ug ______ &ug ______   &ug SKY     &ug SKY      &ug SKY    &ug PINK   &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  
+                &ug ______  &ug ______  &ug SKY    &ug SKY     &ug ______             &ug ______ &ug ______ &ug GREEN    &ug GREEN   &ug SKY      &ug SKY               &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
                 >;
             layer-id = <CURSOR>;
         };
