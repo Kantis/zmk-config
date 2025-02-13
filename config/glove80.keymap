@@ -176,7 +176,7 @@ ZMK_LAYER(mouse_fast,
 
 // MOUSE_SCALER_FAST sets parameters for the &zip_xy_scaler input processor:
 // https://zmk.dev/docs/keymaps/input-processors/scaler
-#define MOUSE_SCALER_FAST 2 1
+#define MOUSE_SCALER_FAST 3 1
 
 // Scaling for mouse movement, based on @caksoylar's example:
 // https://github.com/caksoylar/zmk-config/commit/0020c23c544cd7111013f0114609d1fb90e0e475
@@ -188,6 +188,24 @@ ZMK_LAYER(mouse_fast,
   };
 };
 
+/ {
+  input_processors {
+    zip_scroll_scaler: zip_scroll_scaler {
+      compatible = "zmk,input-processor-scaler";
+      #input-processor-cells = <2>;
+      type = <INPUT_EV_REL>;
+      codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+      track-remainders;
+    };
+  };
+};
+
+&msc_input_listener {
+  fast {
+    layers = <MOUSE_FAST>;
+    input-processors = <&zip_scroll_scaler MOUSE_SCALER_FAST>;
+  };
+};
 
 / {
     underglow-layer {
