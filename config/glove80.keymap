@@ -76,7 +76,7 @@ ZMK_LAYER(lower,
   ___           XXX           XXX             XXX             XXX              &kp HOME                                                                                        &kp LPAR     XXX         &kp EQUAL     &kp SLASH     &kp KP_MULTIPLY   &kp PRINTSCREEN
   ___           XXX           XXX             &kp UP_ARROW    XXX              &kp END                                                                                         &kp RPAR     &kp N7      &kp N8        &kp N9        &kp MINUS         XXX
   ___           XXX           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_UP                                                                                       &kp PERCENT  &kp N4      &kp N5        &kp N6        &kp PLUS          XXX
-  ___           &kp K_APP     XXX             &kp F11         &kp F12          &kp PG_DN  ___            &to NUM    &to BASE                    ___     ___     ___            &kp COMMA    &kp N1      &kp N2        &kp N3        &kp ENTER         &kp LS(TAB)
+  ___           &kp K_APP     XXX             &kp F11         &kp F12          &kp PG_DN  &to MOUSE      &to NUM    &to BASE                    ___     ___     ___            &kp COMMA    &kp N1      &kp N2        &kp N3        &kp ENTER         &kp LS(TAB)
   &magic 2 0    &kp CAPS      &kp INS         &kp F11         &kp F12                     &to CURSOR     &to GAME   ___                         ___     ___     &to SYMBOLS                 &kp N0      &kp COMMA     &kp DOT       &kp ENTER         &kp TAB
 )
 
