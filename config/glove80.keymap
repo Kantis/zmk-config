@@ -153,13 +153,41 @@ ZMK_LAYER(sym,
 
 // MOUSE LAYER 
 ZMK_LAYER(mouse,
+  ___   ___   ___   ___   ___                                                                                             ___             ___             ___           ___              ___   
+  ___   ___   ___   ___   ___             ___                                                                       ___   ___             ___             ___           ___              ___   
+  ___   ___   ___   ___   ___             ___                                                                       ___   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  ___   
+  ___   ___   ___   ___   &mo MOUSE_FAST  ___                                                                       ___   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  ___   
+  ___   ___   ___   ___   ___             ___   &mo MOUSE_FAST  ___   ___           ___       ___        &mkp MB3   ___   &kp  LEFT       &kp  DOWN       &kp  UP       &kp  RIGHT       ___   
+  ___   ___   ___   ___   ___                   ___             ___   &to BASE      &to BASE  &mkp MB2   &mkp MB1         ___             ___             ___           ___              ___   
+)
+
+// FAST MOUSE LAYER 
+ZMK_LAYER(mouse_fast,
   ___   ___   ___   ___   ___                                                                         ___             ___             ___           ___              ___   
   ___   ___   ___   ___   ___   ___                                                             ___   ___             ___             ___           ___              ___   
-  ___   ___   ___   ___   ___   ___                                                             ___   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  ___   
-  ___   ___   ___   ___   ___   ___                                                             ___   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  ___   
-  ___   ___   ___   ___   ___   ___   ___   ___   ___           ___       ___        &mkp MB3   ___   &kp  LEFT       &kp  DOWN       &kp  UP       &kp  RIGHT       ___   
-  ___   ___   ___   ___   ___         ___   ___   &to BASE      &to BASE  &mkp MB2   &mkp MB1         ___             ___             ___           ___              ___   
+  ___   ___   ___   ___   ___   ___                                                             ___   ___             ___             ___           ___              ___   
+  ___   ___   ___   ___   ___   ___                                                             ___   ___             ___             ___           ___              ___   
+  ___   ___   ___   ___   ___   ___   ___   ___   ___           ___       ___        ___        ___   ___             ___             ___           ___              ___   
+  ___   ___   ___   ___   ___         ___   ___   ___           ___       ___        ___              ___             ___             ___           ___              ___   
 )
+
+
+#include <input/processors.dtsi>
+
+// MOUSE_SCALER_FAST sets parameters for the &zip_xy_scaler input processor:
+// https://zmk.dev/docs/keymaps/input-processors/scaler
+#define MOUSE_SCALER_FAST 2 1
+
+// Scaling for mouse movement, based on @caksoylar's example:
+// https://github.com/caksoylar/zmk-config/commit/0020c23c544cd7111013f0114609d1fb90e0e475
+//
+&mmv_input_listener {
+  fast {
+    layers = <MOUSE_FAST>;
+    input-processors = <&zip_xy_scaler MOUSE_SCALER_FAST>;
+  };
+};
+
 
 / {
     underglow-layer {

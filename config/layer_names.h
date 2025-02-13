@@ -9,4 +9,5 @@
 #define CURSOR 7
 #define SYMBOLS 8
 #define MOUSE 9
+#define MOUSE_FAST 10
 
