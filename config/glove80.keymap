@@ -13,7 +13,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #include "zmk-nodefree-config/include/zmk-helpers/helper.h"
@@ -28,29 +27,6 @@
 #define ___ &trans
 #define XXX &none
 
-// Rosewater
-#define GOLD   0xdc8a78
-// Flamingo
-// #define FLAMINGO 0xdd7878
-#define PINK   0xea76cb
-// Mauve
-#define PURPLE 0x8839ef
-#define RED    0xd20f39
-// Peach
-#define ORANGE 0xfe640b
-#define YELLOW 0xdf8e1d
-#define GREEN  0x40a02b
-#define TEAL   0x179299
-#define SKY    0x04a5e5
-// Sapphire
-// #define SAPPHIRE  0x209fb5
-#define BLUE   0x1e66f5
-// Lavendar
-// #define LAVENDAR 0x7287fd
-#define WHITE  0xffffff
-#define ______ 0x000000
-#define BLACK  0x000000
- 
 &lt {
     tapping-term-ms = <140>;
 };
@@ -207,93 +183,4 @@ ZMK_LAYER(mouse_fast,
   };
 };
 
-/ {
-    underglow-layer {
-        compatible  = "zmk,underglow-layer";
-
-        base {
-            bindings = <
-                &ug GREEN   &ug GREEN   &ug GREEN  &ug GREEN   &ug GREEN                                                                                                       &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                              &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                              &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                              &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______ &ug ______ &ug ______ &ug ______  &ug ______ &ug ______           &ug ______ &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______             &ug ______ &ug ______ &ug ______  &ug ______ &ug_cl ______ WHITE  &ug ______             &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                >;
-            layer-id = <BASE>;
-        };
-
-        lower {
-            bindings = <
-                &ug PURPLE  &ug PURPLE  &ug PURPLE &ug PURPLE  &ug PURPLE                                                                                                  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                          &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                          &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                          &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______ &ug ______ &ug GOLD   &ug GREEN     &ug ______   &ug ______   &ug ______ &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______             &ug TEAL   &ug YELLOW &ug GREEN     &ug GREEN    &ug ______   &ug RED                &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                >;
-            layer-id = <LOWER>;
-        };
-
-        symbols {
-            bindings = <
-                &ug RED     &ug RED     &ug RED    &ug RED     &ug RED                                                                                                     &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                          &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                          &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                          &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______ &ug ______ &ug ______ &ug ______    &ug ______   &ug ______   &ug ______ &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______             &ug ______ &ug ______ &ug GREEN     &ug GREEN    &ug ______   &ug ______             &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                >;
-            layer-id = <SYMBOLS>;
-        };
-
-        fn {
-            bindings = <
-                &ug BLUE    &ug BLUE    &ug BLUE   &ug BLUE    &ug BLUE                                                                                                  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                         &ug ______ &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                         &ug ______ &ug BLUE    &ug BLUE    &ug BLUE    &ug ______  &ug ______  
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                         &ug ______ &ug BLUE    &ug BLUE    &ug BLUE    &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______ &ug ______ &ug ______ &ug ______    &ug ______  &ug ______   &ug ______ &ug ______ &ug BLUE    &ug BLUE    &ug BLUE    &ug ______  &ug ______  
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______             &ug ______ &ug ______ &ug ______    &ug ______  &ug ______   &ug ______            &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                >;
-            layer-id = <FN>;
-        };
-
-        num {
-            bindings = <
-                &ug GOLD    &ug GOLD    &ug GOLD   &ug GOLD    &ug GOLD                                                                                                  &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                         &ug ______ &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                         &ug ORANGE &ug GOLD    &ug GOLD    &ug GOLD    &ug ______  &ug ______  
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                         &ug ORANGE &ug GOLD    &ug GOLD    &ug GOLD    &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______ &ug ______ &ug ______ &ug ______    &ug ______  &ug ______   &ug ______ &ug ORANGE &ug GOLD    &ug GOLD    &ug GOLD    &ug ______  &ug ______  
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______             &ug ______ &ug ______ &ug GREEN     &ug WHITE   &ug WHITE    &ug GOLD              &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                >;
-            layer-id = <NUM>;
-        };
-
-        cursor {
-            bindings = <
-                &ug TEAL    &ug TEAL    &ug TEAL   &ug TEAL    &ug TEAL                                                                                                 &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug ______                                                                        &ug ______ &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                &ug ______  &ug ______  &ug PINK   &ug PINK    &ug ______  &ug PINK                                                                          &ug PINK   &ug ______  &ug PINK    &ug PINK    &ug ______  &ug ______  
-                &ug ______  &ug ______  &ug ______ &ug ______  &ug ______  &ug PINK                                                                          &ug PINK   &ug PURPLE  &ug PURPLE  &ug PURPLE  &ug PURPLE  &ug ______
-                &ug ______  &ug SKY     &ug SKY    &ug SKY     &ug ______  &ug PINK   &ug ______ &ug ______ &ug ______   &ug SKY     &ug SKY      &ug SKY    &ug PINK   &ug ______  &ug ______  &ug ______  &ug ______  &ug ______  
-                &ug ______  &ug ______  &ug SKY    &ug SKY     &ug ______             &ug ______ &ug ______ &ug GREEN    &ug GREEN   &ug SKY      &ug SKY               &ug ______  &ug ______  &ug ______  &ug ______  &ug ______
-                >;
-            layer-id = <CURSOR>;
-        };
-
-        gaming {
-            bindings = <
-                &ug YELLOW &ug YELLOW  &ug YELLOW &ug YELLOW &ug YELLOW                                                                                             &ug ______ &ug ______ &ug ______ &ug ______ &ug ______
-                &ug ______ &ug ______  &ug ______ &ug ______ &ug ______ &ug ______                                                                       &ug ______ &ug ______ &ug ______ &ug ______ &ug ______ &ug ______
-                &ug ______ &ug ______  &ug ______ &ug ______ &ug ______ &ug ______                                                                       &ug ______ &ug ______ &ug ______ &ug ______ &ug ______ &ug ______
-                &ug ______ &ug TEAL    &ug ______ &ug PURPLE &ug ______ &ug ______                                                                       &ug ______ &ug ______ &ug ______ &ug ______ &ug ______ &ug ______
-                &ug ______ &ug BLUE    &ug PURPLE &ug PURPLE &ug PURPLE &ug ______ &ug ORANGE &ug BLUE    &ug ______    &ug ______ &ug ______ &ug ______ &ug ______ &ug ______ &ug ______ &ug ______ &ug ______ &ug ______
-                &ug ______ &ug BLUE    &ug ______ &ug ______ &ug ______            &ug RED    &ug ______  &ug GREEN     &ug ______ &ug ______ &ug ______            &ug ______ &ug ______ &ug ______ &ug ______ &ug ______
-                >;
-            layer-id = <GAME>;
-        };
-    };
-};
 
