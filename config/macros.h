@@ -152,9 +152,9 @@ ZMK_MACRO(PROG_elvis,
  * Glove80 defaults
  */
 // Show RGB underglow indicators (bluetooth profiles, battery status, etc)
-ZMK_MACRO(rgb_ug_status_macro,
-    bindings = <&rgb_ug RGB_STATUS>;
-)
+// ZMK_MACRO(rgb_ug_status_macro,
+    // bindings = <&rgb_ug RGB_STATUS>;
+// )
 
 // Select Bluetooth profile 1
 ZMK_MACRO(bt_0,
