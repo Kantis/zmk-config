@@ -53,7 +53,7 @@ ZMK_LAYER(base,
   &kp EQUAL         &lpar_lt        &kp LBKT      &kp RBKT       &rpar_gt      &kp COLON                                                                                                                                XXX     XXX            &kp EQUAL      &kp MINUS     XXX              &kp MINUS
   &kp TAB           &kp Q           &kp W         &kp F          &kp P         &kp G                                                                                                                                    &kp M   &kp L          &kp U          &kp Y         &kp SEMI         &kp BSLH
   &kp ESC           &hml LGUI A     &hml LALT R   &hml LCTRL S   &hml LSHFT T  &kp V                                                                                                                                    &kp K   &hmr RSHFT N   &hmr RCTRL E   &hmr LALT I   &hmr RGUI O      &kp SQT
-  &lpt MOUSE GRAVE  &lpt LOWER Z    &lpt NUM X    &kp C          &kp D         &kp B   &thumb FN BSPC       &tdnum                        &lower                   &kp RGUI  &kp LG(LC(LALT))   &kp RET                 &kp J   &kp H          &kp COMMA      &kp DOT       &rpt PROG FSLH   &pshft
+  &lpt LOWER GRAVE  &lpt MOUSE Z    &lpt NUM X    &kp C          &kp D         &kp B   &thumb FN BSPC       &tdnum                        &lower                   &kp RGUI  &kp LG(LC(LALT))   &kp RET                 &kp J   &kp H          &kp COMMA      &kp DOT       &rpt PROG FSLH   &pshft
   &magic 2 0        &kp N0          &kp RA(W)     &kp RA(A)      &kp RA(O)             &thumb CURSOR SPACE  &thumbdel LG(LC(LALT)) DEL    &kp LS(LG(LC(LALT)))     &kp TAB   &shiftdance        &thumb SYMBOLS SPACE            &kp LEFT       &kp DOWN       &kp UP        &kp RIGHT        &kp PG_DN
 )
 
@@ -102,7 +102,7 @@ ZMK_LAYER(fn,
 ZMK_LAYER(game,
   &kp F1     &kp F2      &kp F3   &kp F4  &kp F5                                                                                                        &kp F6  &kp F7  &kp F8      &kp F9    &kp F10  
   &kp EQUAL  &kp N1      &kp N2   &kp N3  &kp N4  &kp N5                                                                                        &kp N6  &kp N7  &kp N8  &kp N9      &kp N0    &kp BSLH
-  &kp EQUAL  &kp B       &kp B    &kp N   &kp M   &kp SQT                                                                                       &kp B   &kp N   &kp M   &kp COMMA   &kp DOT   &kp FSLH
+  &kp P      &kp I       &kp B    &kp N   &kp M   &kp SQT                                                                                       &kp B   &kp N   &kp M   &kp COMMA   &kp DOT   &kp FSLH
   &kp T      &kp TAB     &kp Q    &kp W   &kp E   &kp R                                                                                         &kp T   &kp Y   &kp U   &kp I       &kp O     &kp P
   &kp G      &kp LSHFT   &kp A    &kp S   &kp D   &kp F   &kp ESC     &kp ENTER    ___                       &kp BSPC   &kp DEL     ___         &kp G   &kp H   &kp J   &kp K       &kp L     &kp P
   &kp V      &kp LCTRL   &kp Z    &kp X   &kp C           &kp SPACE   &kp LALT     &to BASE                  &to BASE   &kp TAB     &kp SPACE           &kp Y   &kp U   &kp I       &kp O     &kp P
@@ -143,8 +143,8 @@ ZMK_LAYER(sym,
 ZMK_LAYER(mouse,
   ___   ___   ___   ___   ___                                                                                             ___             ___             ___              ___              ___   
   ___   ___   ___   ___   ___             ___                                                                       ___   ___             ___             ___              ___              ___   
-  ___   ___   ___   ___   ___             ___                                                                       ___   ___             &mmv MOVE_UP    ___              ___              ___
-  ___   ___   ___   ___   &mo MOUSE_FAST  ___                                                                       ___   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mo MOUSE_FAST   ___   
+  ___   ___   ___   ___   ___             ___                                                                       ___   ___             ___             ___              ___              ___
+  ___   ___   ___   ___   &mo MOUSE_FAST  ___                                                                       ___   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP     &mmv MOVE_RIGHT  ___
   ___   ___   ___   ___   ___             ___   &to BASE        ___   ___           ___       ___        &mkp MB3   ___   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  ___  
   ___   ___   ___   ___   ___                   ___             ___   &to BASE      &to BASE  &mkp MB2   &mkp MB1         ___             ___             ___              ___              ___   
 )
